@@ -23,30 +23,46 @@
     var CONFIG = {"hostname":"raint9.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="平凡的脚步也可以走出伟大的行程">
-<meta property="og:type" content="website">
+  <meta name="description" content="CentOS 7.6-64bit1.安装vmtools：1234567891011121.vmware菜单-&gt;install vmware tools2.centos会出现一个vm安装包3.右键解压，得到一个安装文件:​           tar -zxvf VMwareTools-10.....tar.gz4.进入vm解压的目录，在&#x2F;root&#x2F;桌面&#x2F;vmware-tools-distri">
+<meta property="og:type" content="article">
 <meta property="og:title" content="荒古遗迹">
-<meta property="og:url" content="http://raint9.github.io/index.html">
+<meta property="og:url" content="http://raint9.github.io/2021/02/26/linux-centos7.6/index.html">
 <meta property="og:site_name" content="荒古遗迹">
-<meta property="og:description" content="平凡的脚步也可以走出伟大的行程">
+<meta property="og:description" content="CentOS 7.6-64bit1.安装vmtools：1234567891011121.vmware菜单-&gt;install vmware tools2.centos会出现一个vm安装包3.右键解压，得到一个安装文件:​           tar -zxvf VMwareTools-10.....tar.gz4.进入vm解压的目录，在&#x2F;root&#x2F;桌面&#x2F;vmware-tools-distri">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/01.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/02.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/03.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/04.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/05.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/06.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/07.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/08.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/09.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/10.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/11.png">
+<meta property="og:image" content="c:/Users/24605/Desktop/centos/pictures/12.png">
+<meta property="og:image" content="i:/othersInDesktop/centos/pictures/13.png">
+<meta property="article:published_time" content="2021-02-25T18:45:15.463Z">
+<meta property="article:modified_time" content="2021-02-17T08:21:12.197Z">
 <meta property="article:author" content="Raint">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="c:/Users/24605/Desktop/centos/pictures/01.png">
 
-<link rel="canonical" href="http://raint9.github.io/">
+<link rel="canonical" href="http://raint9.github.io/2021/02/26/linux-centos7.6/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>荒古遗迹</title>
+  <title> | 荒古遗迹</title>
   
 
 
@@ -192,9 +208,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -210,10 +227,9 @@
       <meta itemprop="name" content="荒古遗迹">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
+        <h1 class="post-title" itemprop="name headline">
           
-            <a href="/2021/02/26/linux-centos7.6/" class="post-title-link" itemprop="url">未命名</a>
-        </h2>
+        </h1>
 
         <div class="post-meta">
 
@@ -234,6 +250,13 @@
               </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -244,7 +267,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="CentOS-7-6-64bit"><a href="#CentOS-7-6-64bit" class="headerlink" title="CentOS 7.6-64bit"></a>CentOS 7.6-64bit</h1><h2 id="1-安装vmtools："><a href="#1-安装vmtools：" class="headerlink" title="1.安装vmtools："></a>1.安装vmtools：</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.vmware菜单-&gt;install vmware tools</span><br><span class="line">2.centos会出现一个vm安装包</span><br><span class="line">3.右键解压，得到一个安装文件:</span><br><span class="line">​           tar -zxvf VMwareTools-10.<span class="string">....tar.gz</span></span><br><span class="line"></span><br><span class="line">4.进入vm解压的目录，在<span class="string">/root/</span>桌面<span class="string">/vmware-tools-distrib/</span>下:</span><br><span class="line">​           <span class="keyword">cd</span> VMware.<span class="string">..</span></span><br><span class="line"></span><br><span class="line">5.安装:</span><br><span class="line">​           <span class="string">./vmware-install.pl</span></span><br><span class="line"></span><br><span class="line">7.reboot</span><br></pre></td></tr></table></figure>
+        <h1 id="CentOS-7-6-64bit"><a href="#CentOS-7-6-64bit" class="headerlink" title="CentOS 7.6-64bit"></a>CentOS 7.6-64bit</h1><h2 id="1-安装vmtools："><a href="#1-安装vmtools：" class="headerlink" title="1.安装vmtools："></a>1.安装vmtools：</h2><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">1.vmware菜单-&gt;install vmware tools</span><br><span class="line">2.centos会出现一个vm安装包</span><br><span class="line">3.右键解压，得到一个安装文件:</span><br><span class="line">​           tar -zxvf VMwareTools-10.<span class="string">....tar.gz</span></span><br><span class="line"></span><br><span class="line">4.进入vm解压的目录，在<span class="string">/root/</span>桌面<span class="string">/vmware-tools-distrib/</span>下:</span><br><span class="line">​           <span class="keyword">cd</span> VMware.<span class="string">..</span></span><br><span class="line"></span><br><span class="line">5.安装:</span><br><span class="line">​           <span class="string">./vmware-install.pl</span></span><br><span class="line"></span><br><span class="line">7.reboot</span><br></pre></td></tr></table></figure>
 <h2 id="2-Linux目录结构："><a href="#2-Linux目录结构：" class="headerlink" title="2.Linux目录结构："></a>2.Linux目录结构：</h2><figure class="highlight haml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">-<span class="ruby">&gt; <span class="regexp">/boot  :large_orange_diamond:</span></span></span><br><span class="line"><span class="ruby">​          存放的是启动Linux时使用的一些核心文件，包括一些连接文件以及镜像文件</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/proc :[**别乱动**] </span></span></span><br><span class="line"><span class="ruby">​          这个目录是一个虚拟的目录，它是系统内存的映射，访问这个目录来获取系统信息</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/srv :[**别乱动**] </span></span></span><br><span class="line"><span class="ruby">​          service缩写，该目录存放一些服务启动之后需要提取的数据</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/sys :[**别乱动**]</span></span></span><br><span class="line"><span class="ruby">​          这是Linux2.<span class="number">6</span>内核的一个很大的变化。该目录下安装了<span class="number">2.6</span>内核中新出现的一个文件系统sysfs</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/tmp：</span></span></span><br><span class="line"><span class="ruby">​          这个目录是用来存放一些临时文件的</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/dev: </span></span></span><br><span class="line"><span class="ruby">​          类似于windows的设备管理器，把所有的硬件用文件的形式存储</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/media :large_orange_diamond:</span></span></span><br><span class="line"><span class="ruby">​          Linux系统会自动识别一些设备，例如U盘，光驱等等，当识别后，Linux会把识别的设备挂载到这个目录下</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/mnt:large_orange_diamond:</span></span></span><br><span class="line"><span class="ruby">​        系统提供该目录是为了让用户临时挂载别的文件系统的，我们可以将外部的存储挂载在 /mnt/ 上，然后进入该目录就可以查看里面的内容了</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/opt : </span></span></span><br><span class="line"><span class="ruby">​         这是给主机额外**安装软件**所摆放的目录。例如安装ORACLE数据库就可以放到该目录下。默认为空</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/usr/local</span><span class="symbol">:large_orange_diamond</span><span class="symbol">:</span></span></span><br><span class="line"><span class="ruby">​         这是另一个给主机额外安装软件所**安装的目录**。一般是通过编译源码方式安装的程序。</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/var :large_orange_diamond:</span></span></span><br><span class="line"><span class="ruby">​         这个目录中存放着在不断扩充着的东西，习惯将经常被修改的目录放在这个目录下。包括各种日志文件。</span></span><br><span class="line"></span><br><span class="line"><span class="ruby">-&gt; <span class="regexp">/selinux[security-enhanced linux]360:</span></span></span><br><span class="line"><span class="ruby">​         SE Linux是一种安全子系统，它能控制程序只能访问特定文件</span></span><br></pre></td></tr></table></figure>
 <ul>
 <li><strong>Linux系统，一切皆为文件</strong></li>
@@ -607,100 +630,116 @@
 </li>
 </ol>
 
-      
     </div>
 
     
     
     
 
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+ 
+        <div class="reward-container">
+  <div>原创技术分享，您的支持将鼓励我继续创造</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
       
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://raint9.github.io/2021/02/26/hello-world/">
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Raint 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Raint 支付宝">
+        <p>支付宝</p>
+      </div>
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Raint">
-      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
-    </span>
+  </div>
+</div>
 
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="荒古遗迹">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/26/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
+        
 
-        <div class="post-meta">
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Raint
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://raint9.github.io/2021/02/26/linux-centos7.6/" title="">http://raint9.github.io/2021/02/26/linux-centos7.6/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
 
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
+        
 
-              <time title="创建时间：2021-02-26 00:17:52" itemprop="dateCreated datePublished" datetime="2021-02-26T00:17:52+08:00">2021-02-26</time>
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
             </span>
 
-          
-
+            <span class="label">WeChat</span>
+          </a>
         </div>
-      </header>
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
+            <span class="label">RSS</span>
+          </a>
+        </div>
     </div>
+  </div>
 
-    
-    
-    
 
       <footer class="post-footer">
-        <div class="post-eof"></div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/02/26/hello-world/" rel="prev" title="Hello World">
+      <i class="fa fa-chevron-left"></i> Hello World
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81MjgyOS8yOTMwNw=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -747,6 +786,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#CentOS-7-6-64bit"><span class="nav-number">1.</span> <span class="nav-text">CentOS 7.6-64bit</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E5%AE%89%E8%A3%85vmtools%EF%BC%9A"><span class="nav-number">1.1.</span> <span class="nav-text">1.安装vmtools：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-Linux%E7%9B%AE%E5%BD%95%E7%BB%93%E6%9E%84%EF%BC%9A"><span class="nav-number">1.2.</span> <span class="nav-text">2.Linux目录结构：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-Vim"><span class="nav-number">1.3.</span> <span class="nav-text">3.Vim</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-Basic-Command"><span class="nav-number">1.4.</span> <span class="nav-text">4.Basic Command</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-Common-Command"><span class="nav-number">1.4.1.</span> <span class="nav-text">4.1.Common Command</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-1-ls"><span class="nav-number">1.4.1.1.</span> <span class="nav-text">4.1.1 # ls</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-2-cd"><span class="nav-number">1.4.1.2.</span> <span class="nav-text">4.1.2 #cd</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-3-mkdir"><span class="nav-number">1.4.1.3.</span> <span class="nav-text">4.1.3 #mkdir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-4-rmdir"><span class="nav-number">1.4.1.4.</span> <span class="nav-text">4.1.4 #rmdir</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-5-touch"><span class="nav-number">1.4.1.5.</span> <span class="nav-text">4.1.5 #touch</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-6-cp"><span class="nav-number">1.4.1.6.</span> <span class="nav-text">4.1.6 #cp</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-6-rm"><span class="nav-number">1.4.1.7.</span> <span class="nav-text">4.1.6 #rm</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-7-mv"><span class="nav-number">1.4.1.8.</span> <span class="nav-text">4.1.7 #mv</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-8-cat"><span class="nav-number">1.4.1.9.</span> <span class="nav-text">4.1.8 #cat</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-9-more"><span class="nav-number">1.4.1.10.</span> <span class="nav-text">4.1.9 #more</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-11-gt-%E5%92%8C-gt-gt"><span class="nav-number">1.4.1.11.</span> <span class="nav-text">4.1.11 &gt; 和 &gt;&gt;</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-12-echo"><span class="nav-number">1.4.1.12.</span> <span class="nav-text">4.1.12 #echo</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-13-head"><span class="nav-number">1.4.1.13.</span> <span class="nav-text">4.1.13 #head</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-14-tail"><span class="nav-number">1.4.1.14.</span> <span class="nav-text">4.1.14 #tail</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-15-ln"><span class="nav-number">1.4.1.15.</span> <span class="nav-text">4.1.15 #ln</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-16-history"><span class="nav-number">1.4.1.16.</span> <span class="nav-text">4.1.16 #history</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-17-date"><span class="nav-number">1.4.1.17.</span> <span class="nav-text">4.1.17 #date</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-18-cal"><span class="nav-number">1.4.1.18.</span> <span class="nav-text">4.1.18 #cal</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-19-grep-%E5%92%8C"><span class="nav-number">1.4.1.19.</span> <span class="nav-text">4.1.19 grep  和 |</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-20-find"><span class="nav-number">1.4.1.20.</span> <span class="nav-text">4.1.20 #find</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-21-locate"><span class="nav-number">1.4.1.21.</span> <span class="nav-text">4.1.21#locate</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-%E5%85%B3%E6%9C%BA-amp-%E9%87%8D%E5%90%AF%E5%91%BD%E4%BB%A4"><span class="nav-number">1.4.2.</span> <span class="nav-text">4.2 关机&amp;重启命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-3-%E7%94%A8%E6%88%B7%E7%AE%A1%E7%90%86"><span class="nav-number">1.4.3.</span> <span class="nav-text">4.3 用户管理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-4%E7%94%A8%E6%88%B7%E7%BB%84"><span class="nav-number">1.4.3.1.</span> <span class="nav-text">4.3.4用户组</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-3-5%E7%94%A8%E6%88%B7%E5%92%8C%E7%BB%84%E7%9A%84%E7%9B%B8%E5%85%B3%E6%96%87%E4%BB%B6"><span class="nav-number">1.4.3.2.</span> <span class="nav-text">4.3.5用户和组的相关文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-4-Linux%E7%B3%BB%E7%BB%9F%E8%BF%90%E8%A1%8C%E7%BA%A7%E5%88%AB"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.4 Linux系统运行级别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-5-%E5%B8%AE%E5%8A%A9%E6%8C%87%E4%BB%A4"><span class="nav-number">1.4.5.</span> <span class="nav-text">4.5 帮助指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-6-%E5%8E%8B%E7%BC%A9%E5%92%8C%E8%A7%A3%E5%8E%8B%E7%B1%BB"><span class="nav-number">1.4.6.</span> <span class="nav-text">4.6 压缩和解压类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-1-gzip-gunzip"><span class="nav-number">1.4.6.1.</span> <span class="nav-text">4.6.1 #gzip &#x2F; #gunzip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-2-zip-unzip"><span class="nav-number">1.4.6.2.</span> <span class="nav-text">4.6.2 #zip &#x2F; #unzip</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-6-3-tar"><span class="nav-number">1.4.6.3.</span> <span class="nav-text">4.6.3 #tar</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-Linux%E7%BB%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.5.</span> <span class="nav-text">5.Linux组基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E5%88%86%E7%B1%BB"><span class="nav-number">1.5.1.</span> <span class="nav-text">5.1分类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E5%85%B6%E4%BB%96%E5%91%BD%E4%BB%A4"><span class="nav-number">1.5.2.</span> <span class="nav-text">5.2其他命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-%E6%9D%83%E9%99%90%E7%9A%84%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D"><span class="nav-number">1.5.3.</span> <span class="nav-text">5.3.权限的基本介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#5-4%E4%BF%AE%E6%94%B9%E6%9D%83%E9%99%90-chmod"><span class="nav-number">1.5.3.1.</span> <span class="nav-text">5.4修改权限-chmod</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-5%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E6%89%80%E6%9C%89%E8%80%85-chown"><span class="nav-number">1.5.3.2.</span> <span class="nav-text">5.5修改文件&#x2F;目录所有者-chown</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-6%E4%BF%AE%E6%94%B9%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95%E6%89%80%E5%9C%A8%E7%BB%84-chgrp"><span class="nav-number">1.5.3.3.</span> <span class="nav-text">5.6修改文件&#x2F;目录所在组-chgrp</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-crond-%E4%BB%BB%E5%8A%A1%E8%B0%83%E5%BA%A6"><span class="nav-number">1.6.</span> <span class="nav-text">6.crond 任务调度</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#5-1%E5%8F%82%E7%85%A7%E7%BB%86%E8%8A%82%E8%AF%B4%E6%98%8E"><span class="nav-number">1.6.1.</span> <span class="nav-text">5.1参照细节说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-2%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.6.2.</span> <span class="nav-text">5.2应用实例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-3-crond-%E7%9B%B8%E5%85%B3%E6%8C%87%E4%BB%A4"><span class="nav-number">1.6.3.</span> <span class="nav-text">5.3 crond 相关指令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-4-at%E5%AE%9A%E6%97%B6%E4%BB%BB%E5%8A%A1"><span class="nav-number">1.6.4.</span> <span class="nav-text">5.4 at定时任务</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-Linux%E7%A3%81%E7%9B%98%E5%88%86%E5%8C%BA-%E6%8C%82%E8%BD%BD"><span class="nav-number">1.7.</span> <span class="nav-text">7.Linux磁盘分区,挂载</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1Linux%E5%88%86%E5%8C%BA"><span class="nav-number">1.7.1.</span> <span class="nav-text">7.1Linux分区</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2%E6%8C%82%E8%BD%BD%E7%9A%84%E7%BB%8F%E5%85%B8%E6%A1%88%E4%BE%8B"><span class="nav-number">1.7.2.</span> <span class="nav-text">7.2挂载的经典案例</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-3%E7%A3%81%E7%9B%98%E6%83%85%E5%86%B5"><span class="nav-number">1.7.3.</span> <span class="nav-text">7.3磁盘情况</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-1%E6%9F%A5%E8%AF%A2"><span class="nav-number">1.7.3.1.</span> <span class="nav-text">7.3.1查询</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#7-3-2%E5%B7%A5%E4%BD%9C%E5%AE%9E%E7%94%A8%E6%8C%87%E4%BB%A4"><span class="nav-number">1.7.3.2.</span> <span class="nav-text">7.3.2工作实用指令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-Linux-%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE"><span class="nav-number">1.8.</span> <span class="nav-text">8.Linux 网络配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#8-1-Linux%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE%E5%8E%9F%E7%90%86%E5%9B%BE"><span class="nav-number">1.8.1.</span> <span class="nav-text">8.1 Linux网络配置原理图</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-2-%E6%9F%A5%E7%9C%8B%E7%BD%91%E7%BB%9C-IP-%E5%92%8C%E7%BD%91%E5%85%B3"><span class="nav-number">1.8.2.</span> <span class="nav-text">8.2 查看网络 IP 和网关</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-3%E6%9F%A5%E7%9C%8Bwindows%E7%8E%AF%E5%A2%83%E4%B8%AD%E7%9A%84VMnet8%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-ipconfig%E6%8C%87%E4%BB%A4"><span class="nav-number">1.8.3.</span> <span class="nav-text">8.3查看windows环境中的VMnet8网络配置 (ipconfig指令)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-4%E6%9F%A5%E7%9C%8BLinux%E7%9A%84%E7%BD%91%E7%BB%9C%E9%85%8D%E7%BD%AE-ifconfig"><span class="nav-number">1.8.4.</span> <span class="nav-text">8.4查看Linux的网络配置 ifconfig</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-5-ping-%E6%B5%8B%E8%AF%95%E4%B8%BB%E6%9C%BA%E4%B9%8B%E9%97%B4%E7%BD%91%E7%BB%9C%E8%BF%9E%E9%80%9A%E6%80%A7"><span class="nav-number">1.8.5.</span> <span class="nav-text">8.5 ping 测试主机之间网络连通性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-6-Linux%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE"><span class="nav-number">1.8.6.</span> <span class="nav-text">8.6 Linux网络环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-6-1%E7%AC%AC%E4%BA%8C%E7%A7%8D%E6%96%B9%E6%B3%95-%E6%8C%87%E5%AE%9Aip"><span class="nav-number">1.8.6.1.</span> <span class="nav-text">8.6.1第二种方法(指定ip)</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-7%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D%E5%92%8Chosts%E6%98%A0%E5%B0%84"><span class="nav-number">1.8.7.</span> <span class="nav-text">8.7设置主机名和hosts映射</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-7-1%E8%AE%BE%E7%BD%AE%E4%B8%BB%E6%9C%BA%E5%90%8D"><span class="nav-number">1.8.7.1.</span> <span class="nav-text">8.7.1设置主机名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-7-2%E8%AE%BE%E7%BD%AEhosts%E6%98%A0%E5%B0%84"><span class="nav-number">1.8.7.2.</span> <span class="nav-text">8.7.2设置hosts映射</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#8-8%E4%B8%BB%E6%9C%BA%E5%90%8D%E8%A7%A3%E6%9E%90%E8%BF%87%E7%A8%8B%E5%88%86%E6%9E%90-Hosts-DNS"><span class="nav-number">1.8.8.</span> <span class="nav-text">8.8主机名解析过程分析(Hosts ,DNS)</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#8-8-1-Hosts-%E6%98%AF%E4%BB%80%E4%B9%88"><span class="nav-number">1.8.8.1.</span> <span class="nav-text">8.8.1 Hosts 是什么</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-8-2-DNS"><span class="nav-number">1.8.8.2.</span> <span class="nav-text">8.8.2 DNS</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#8-8-3%E5%BA%94%E7%94%A8%E5%AE%9E%E4%BE%8B"><span class="nav-number">1.8.8.3.</span> <span class="nav-text">8.8.3应用实例</span></a></li></ol></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -952,6 +992,21 @@ $(document).ready(function() {
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.9},"log":false});</script></body>
 </html>
