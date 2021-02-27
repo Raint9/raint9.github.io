@@ -9,27 +9,8 @@
     <atom:link href="http://raint9.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>平凡的脚步也可以走出伟大的行程</description>
-    <pubDate>Sat, 27 Feb 2021 07:41:19 GMT</pubDate>
+    <pubDate>Sat, 27 Feb 2021 10:42:50 GMT</pubDate>
     <generator>http://hexo.io/</generator>
-    
-    <item>
-      <title>我的测试文件</title>
-      <link>http://raint9.github.io/2021/02/27/test/</link>
-      <guid>http://raint9.github.io/2021/02/27/test/</guid>
-      <pubDate>Sat, 27 Feb 2021 06:49:05 GMT</pubDate>
-      
-      
-      
-      
-      <category domain="http://raint9.github.io/categories/%E6%B5%8B%E8%AF%95%E5%A0%86/">测试堆</category>
-      
-      
-      <category domain="http://raint9.github.io/tags/%E6%B5%8B%E8%AF%95/">-测试</category>
-      
-      
-      <comments>http://raint9.github.io/2021/02/27/test/#disqus_thread</comments>
-      
-    </item>
     
     <item>
       <title>Linux-CentOS</title>
