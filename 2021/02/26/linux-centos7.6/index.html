@@ -20,7 +20,7 @@
 
 <script id="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"raint9.github.io","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+    var CONFIG = {"hostname":"raint9.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
   <meta name="description" content="这是一篇基于centos7.6的基础笔记">
@@ -142,27 +142,27 @@
   </li>
         <li class="menu-item menu-item-about">
 
-    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+    <a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
 
   </li>
         <li class="menu-item menu-item-tags">
 
-    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
 
   </li>
         <li class="menu-item menu-item-categories">
 
-    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
 
   </li>
         <li class="menu-item menu-item-archives">
 
-    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
 
   </li>
         <li class="menu-item menu-item-resources">
 
-    <a href="/resources/" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
+    <a href="/resources" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
 
   </li>
       <li class="menu-item menu-item-search">
@@ -399,17 +399,13 @@
 </ul>
 <h3 id="5-3-权限的基本介绍"><a href="#5-3-权限的基本介绍" class="headerlink" title="5.3.权限的基本介绍"></a>5.3.权限的基本介绍</h3><ul>
 <li><p>-rwxrw-r–   1  root  root  1213  Feb  2  09:39 abc<img src="C:\Users\24605\Desktop\centos\pictures\01.png" alt="01">1</p>
-<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>-<span class="number">9</span>位说明</span><br><span class="line"><span class="number">1</span>.第 <span class="number">0</span>位确定文件类型（d,-,l,b）</span><br><span class="line">  - 普通文件</span><br><span class="line">  l 链接，相当于windows的快捷方式</span><br><span class="line">  d 是目录，相当于windows的文件夹</span><br><span class="line">  c 是字符设备文件，鼠标键盘</span><br><span class="line">  b 是块设备，比如键盘</span><br><span class="line"><span class="number">2</span>.第<span class="number">1</span>-<span class="number">3</span>位确定所有者(该文件的所有者)拥有该文件的权限   ---User</span><br><span class="line"><span class="number">3</span>.第<span class="number">4</span>-<span class="number">6</span>位确定所属组(同用户组的)拥有该文件的权限      ---Group</span><br><span class="line"><span class="number">4</span>.第<span class="number">7</span>-<span class="number">9</span>位确定其他用户拥有该文件的权限              ---Other</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight crmsh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">0</span>-<span class="number">9</span>位说明</span><br><span class="line"><span class="number">1</span>.第 <span class="number">0</span>位确定文件类型（d,-,l,b）</span><br><span class="line">  - 普通文件</span><br><span class="line">  l 链接，相当于windows的快捷方式</span><br><span class="line">  d 是目录，相当于windows的文件夹</span><br><span class="line">  c 是字符设备文件，鼠标键盘</span><br><span class="line">  b 是块设备，比如键盘</span><br><span class="line"><span class="number">2</span>.第<span class="number">1</span>-<span class="number">3</span>位确定所有者(该文件的所有者)拥有该文件的权限   ---User</span><br><span class="line"><span class="number">3</span>.第<span class="number">4</span>-<span class="number">6</span>位确定所属组(同用户组的)拥有该文件的权限      ---Group</span><br><span class="line"><span class="number">4</span>.第<span class="number">7</span>-<span class="number">9</span>位确定其他用户拥有该文件的权限              ---Other</span><br></pre></td></tr></table></figure></li>
 <li><p>rwx作用到文件</p>
 <figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">1</span>.<span class="selector-attr">[r]</span>代表可读(read):可以读取，查看</span><br><span class="line"><span class="selector-tag">2</span>.<span class="selector-attr">[w]</span>代表可写(write):可以修改，但是不代表可以删除，删除一个文件的前提条件是对该文件所在的目录有写权限，才能删除该文件</span><br><span class="line"><span class="selector-tag">3</span>.<span class="selector-attr">[x]</span>代表可执行(execute):可以被执行</span><br></pre></td></tr></table></figure></li>
 <li><p> rwx作用到目录</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">1</span>.<span class="selector-attr">[r]</span>代表可读(read):可以读取，<span class="selector-tag">ls</span>查看目录内容</span><br><span class="line"><span class="selector-tag">2</span>.<span class="selector-attr">[w]</span>代表可写(write):可以修改，对目录内创建+删除+重命名目录</span><br><span class="line"><span class="selector-tag">3</span>.<span class="selector-attr">[x]</span>代表可执行(execute):可以进入该目录</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">1</span>.<span class="selector-attr">[r]</span>代表可读(read):可以读取，<span class="selector-tag">ls</span>查看目录内容</span><br><span class="line"><span class="selector-tag">2</span>.<span class="selector-attr">[w]</span>代表可写(write):可以修改，对目录内创建+删除+重命名目录</span><br><span class="line"><span class="selector-tag">3</span>.<span class="selector-attr">[x]</span>代表可执行(execute):可以进入该目录</span><br></pre></td></tr></table></figure></li>
 <li><p>-rwxrw-r–   1  root  root  1213  Feb  2  09:39 abc</p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">* 10个字符确定不同用户能对文件干什么，第二个字符开始每3个一组</span><br><span class="line">   第一组rwx:文件拥有者的权限是读r，写w，执行x </span><br><span class="line">   第二组rw-:与文件拥有者同一组的用户的权限是读，写但不能执行</span><br><span class="line">   第三组r--:不与文件拥有者同组的其他用户的权限是读，不能写和执行</span><br><span class="line"></span><br><span class="line">* 可用数字表示为:</span><br><span class="line">   <span class="attribute">r</span>=4 ,<span class="attribute">w</span>=2 ,<span class="attribute">x</span>=1,因此rwx=4+2+1=7</span><br><span class="line">* 其他说明</span><br><span class="line">   1       文件:硬连接数或  目录:子目录</span><br><span class="line">   root    用户</span><br><span class="line">   root    组</span><br><span class="line">   1213    文件大小(字节)，如果是文件夹，显示 4096 字节</span><br><span class="line">   Feb 2 09:39  最后修改日期</span><br><span class="line">   abc     文件名</span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">* 10个字符确定不同用户能对文件干什么，第二个字符开始每3个一组</span><br><span class="line">   第一组rwx:文件拥有者的权限是读r，写w，执行x </span><br><span class="line">   第二组rw-:与文件拥有者同一组的用户的权限是读，写但不能执行</span><br><span class="line">   第三组r--:不与文件拥有者同组的其他用户的权限是读，不能写和执行</span><br><span class="line"></span><br><span class="line">* 可用数字表示为:</span><br><span class="line">   <span class="attribute">r</span>=4 ,<span class="attribute">w</span>=2 ,<span class="attribute">x</span>=1,因此rwx=4+2+1=7</span><br><span class="line">* 其他说明</span><br><span class="line">   1       文件:硬连接数或  目录:子目录</span><br><span class="line">   root    用户</span><br><span class="line">   root    组</span><br><span class="line">   1213    文件大小(字节)，如果是文件夹，显示 4096 字节</span><br><span class="line">   Feb 2 09:39  最后修改日期</span><br><span class="line">   abc     文件名</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="5-4修改权限-chmod"><a href="#5-4修改权限-chmod" class="headerlink" title="5.4修改权限-chmod"></a>5.4修改权限-chmod</h4><ul>
 <li><p>基本说明：</p>
@@ -427,23 +423,19 @@
 <figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">r</span>=4, <span class="attribute">w</span>=2, <span class="attribute">x</span>=1  <span class="attribute">rwx</span>=4+2+1=7</span><br><span class="line">chmod <span class="attribute">u</span>=rwx,g=rx,o=x 文件目录名</span><br><span class="line">相当于：chmod  751  文件目录名</span><br></pre></td></tr></table></figure>
 
 <h4 id="5-5修改文件-目录所有者-chown"><a href="#5-5修改文件-目录所有者-chown" class="headerlink" title="5.5修改文件/目录所有者-chown"></a>5.5修改文件/目录所有者-chown</h4><ul>
-<li>基本介绍<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">改变所有者：chown  <span class="keyword">new</span><span class="type">owner</span>   文件/目录   </span><br><span class="line">改变所有者和所在组：chown  <span class="keyword">new</span><span class="type">owner</span>:<span class="keyword">new</span><span class="type">group</span>   文件/目录    </span><br><span class="line">*-R 如果是目录则使其下所有子文件或目录递归生效</span><br></pre></td></tr></table></figure>
-
-</li>
+<li>基本介绍<figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">改变所有者：chown  <span class="keyword">new</span><span class="type">owner</span>   文件/目录   </span><br><span class="line">改变所有者和所在组：chown  <span class="keyword">new</span><span class="type">owner</span>:<span class="keyword">new</span><span class="type">group</span>   文件/目录    </span><br><span class="line">*-R 如果是目录则使其下所有子文件或目录递归生效</span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="5-6修改文件-目录所在组-chgrp"><a href="#5-6修改文件-目录所在组-chgrp" class="headerlink" title="5.6修改文件/目录所在组-chgrp"></a>5.6修改文件/目录所在组-chgrp</h4><ul>
 <li>基本介绍<br>chgrp  newgroup  文件/目录  改变所在组<br>-R 递归应用到文件夹</li>
 </ul>
 <h2 id="6-crond-任务调度"><a href="#6-crond-任务调度" class="headerlink" title="6.crond 任务调度"></a>6.crond 任务调度</h2><ul>
 <li><p>概述</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">  任务调度：是指系统在某个时间执行的特定的命令或者程序</span></span><br><span class="line"><span class="code">  任务调度分类：1.系统工作：有些重要的工作必须周而复始地执行。如病毒扫描等</span></span><br><span class="line"><span class="bullet">* </span>个别用户工作：个别用户可能希望执行某些程序，比如对mysql数据库的备份</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="code">  任务调度：是指系统在某个时间执行的特定的命令或者程序</span></span><br><span class="line"><span class="code">  任务调度分类：1.系统工作：有些重要的工作必须周而复始地执行。如病毒扫描等</span></span><br><span class="line"><span class="bullet">* </span>个别用户工作：个别用户可能希望执行某些程序，比如对mysql数据库的备份</span><br></pre></td></tr></table></figure></li>
 <li><p>基本语法</p>
 <p>crontab [选项]</p>
 </li>
 <li><p>常用选项</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-e    编辑crontab定时任务</span></span><br><span class="line"><span class="deletion">-l    查询crontab任务</span></span><br><span class="line"><span class="deletion">-r    删除当前用户所有的crontab任务</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-e    编辑crontab定时任务</span></span><br><span class="line"><span class="deletion">-l    查询crontab任务</span></span><br><span class="line"><span class="deletion">-r    删除当前用户所有的crontab任务</span></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>快速入门</p>
 <p>设置任务调度文件：/etc/crontab</p>
 <p>设置个人任务调度。执行crontab -e命令</p>
@@ -493,12 +485,10 @@
 <p>Ctrl + D 结束at命令的输入</p>
 </li>
 <li><p>at 命令选项</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">选项        含义</span><br><span class="line"><span class="deletion">-m          当指定的任务被完成后，将给用户发送邮件，即使没有标准输出</span></span><br><span class="line"><span class="deletion">-I          atq的别名</span></span><br><span class="line"><span class="deletion">-d          atrm的别名</span></span><br><span class="line"><span class="deletion">-v          显示任务将被执行的时间</span></span><br><span class="line"><span class="deletion">-c          打印任务的内容到标准输出</span></span><br><span class="line"><span class="deletion">-V          显示版本信息</span></span><br><span class="line"><span class="deletion">-q &lt;队列&gt;    使用指定的队列</span></span><br><span class="line"><span class="deletion">-f &lt;文件&gt;    从指定文件读入任务而不是从标准输入读入</span></span><br><span class="line"><span class="deletion">-t &lt;时间参数&gt;   以时间参数的形式提交要运行的任务</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">选项        含义</span><br><span class="line"><span class="deletion">-m          当指定的任务被完成后，将给用户发送邮件，即使没有标准输出</span></span><br><span class="line"><span class="deletion">-I          atq的别名</span></span><br><span class="line"><span class="deletion">-d          atrm的别名</span></span><br><span class="line"><span class="deletion">-v          显示任务将被执行的时间</span></span><br><span class="line"><span class="deletion">-c          打印任务的内容到标准输出</span></span><br><span class="line"><span class="deletion">-V          显示版本信息</span></span><br><span class="line"><span class="deletion">-q &lt;队列&gt;    使用指定的队列</span></span><br><span class="line"><span class="deletion">-f &lt;文件&gt;    从指定文件读入任务而不是从标准输入读入</span></span><br><span class="line"><span class="deletion">-t &lt;时间参数&gt;   以时间参数的形式提交要运行的任务</span></span><br></pre></td></tr></table></figure></li>
 <li><p>at时间定义</p>
 <p>at指定时间的方法：</p>
-<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">1</span>.接受在当天的<span class="selector-tag">hh</span>:<span class="selector-tag">mm</span>(小时:分钟)式的时间指定。假如该时间已过去，那么就放在第二天执行。例如：<span class="selector-tag">4</span>:<span class="selector-tag">00</span></span><br><span class="line"><span class="selector-tag">2</span>.使用<span class="selector-tag">midnight</span>(深夜)，<span class="selector-tag">noon</span>(中午)，<span class="selector-tag">teatime</span>(饮茶时间，一般是下午<span class="number">4</span>点)等比较模糊的词语来指定时间</span><br><span class="line"><span class="selector-tag">3</span>.采用<span class="selector-tag">12</span>小时计时制，即在时间后面加上<span class="selector-tag">AM</span>(上午)或<span class="selector-tag">PM</span>(下午)来说明是上午还是下午。例如：<span class="selector-tag">12pm</span></span><br><span class="line"><span class="selector-tag">4</span>.指定命令执行的具体日期，指定格式为<span class="selector-tag">month</span> <span class="selector-tag">day</span>(月日)或<span class="selector-tag">mm</span>/<span class="selector-tag">dd</span>/<span class="selector-tag">yy</span>(月/日/年)或<span class="selector-tag">dd</span><span class="selector-class">.mm</span><span class="selector-class">.yy</span></span><br><span class="line"><span class="selector-tag">5</span>.使用相对计时法。指定格式为：<span class="selector-tag">now</span> + <span class="selector-tag">count</span> <span class="selector-tag">time</span><span class="selector-tag">-units</span>,<span class="selector-tag">now</span>就是当前时间，<span class="selector-tag">time</span><span class="selector-tag">-units</span>是时间单位，这里能够是<span class="selector-tag">minutes</span>(分钟),<span class="selector-tag">hours</span>(小时),<span class="selector-tag">days</span>(天),<span class="selector-tag">weeks</span>(星期)。<span class="selector-tag">count</span>是时间的数量，几天，几小时。例如：<span class="selector-tag">now</span> + <span class="selector-tag">5</span> <span class="selector-tag">minutes</span></span><br><span class="line"><span class="selector-tag">6</span>.直接使用<span class="selector-tag">today</span>(今天)，<span class="selector-tag">tomorrow</span>(每天)来指定完成命令的时间</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">1</span>.接受在当天的<span class="selector-tag">hh</span>:<span class="selector-tag">mm</span>(小时:分钟)式的时间指定。假如该时间已过去，那么就放在第二天执行。例如：<span class="selector-tag">4</span>:<span class="selector-tag">00</span></span><br><span class="line"><span class="selector-tag">2</span>.使用<span class="selector-tag">midnight</span>(深夜)，<span class="selector-tag">noon</span>(中午)，<span class="selector-tag">teatime</span>(饮茶时间，一般是下午<span class="number">4</span>点)等比较模糊的词语来指定时间</span><br><span class="line"><span class="selector-tag">3</span>.采用<span class="selector-tag">12</span>小时计时制，即在时间后面加上<span class="selector-tag">AM</span>(上午)或<span class="selector-tag">PM</span>(下午)来说明是上午还是下午。例如：<span class="selector-tag">12pm</span></span><br><span class="line"><span class="selector-tag">4</span>.指定命令执行的具体日期，指定格式为<span class="selector-tag">month</span> <span class="selector-tag">day</span>(月日)或<span class="selector-tag">mm</span>/<span class="selector-tag">dd</span>/<span class="selector-tag">yy</span>(月/日/年)或<span class="selector-tag">dd</span><span class="selector-class">.mm</span><span class="selector-class">.yy</span></span><br><span class="line"><span class="selector-tag">5</span>.使用相对计时法。指定格式为：<span class="selector-tag">now</span> + <span class="selector-tag">count</span> <span class="selector-tag">time</span><span class="selector-tag">-units</span>,<span class="selector-tag">now</span>就是当前时间，<span class="selector-tag">time</span><span class="selector-tag">-units</span>是时间单位，这里能够是<span class="selector-tag">minutes</span>(分钟),<span class="selector-tag">hours</span>(小时),<span class="selector-tag">days</span>(天),<span class="selector-tag">weeks</span>(星期)。<span class="selector-tag">count</span>是时间的数量，几天，几小时。例如：<span class="selector-tag">now</span> + <span class="selector-tag">5</span> <span class="selector-tag">minutes</span></span><br><span class="line"><span class="selector-tag">6</span>.直接使用<span class="selector-tag">today</span>(今天)，<span class="selector-tag">tomorrow</span>(每天)来指定完成命令的时间</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
 <li><p>应用实例</p>
 </li>
 </ul>
@@ -525,19 +515,13 @@
 <p>下面我们以增加一块硬盘为例来熟悉一下硬盘的相关指令和深入理解磁盘分区，挂载，卸载的概念</p>
 </li>
 <li><p>如何增加一块硬盘</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.虚拟机添加硬盘</span><br><span class="line">2.分区</span><br><span class="line">3.格式化</span><br><span class="line">4.挂载</span><br><span class="line">5.设置可以自动挂载</span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">1.虚拟机添加硬盘</span><br><span class="line">2.分区</span><br><span class="line">3.格式化</span><br><span class="line">4.挂载</span><br><span class="line">5.设置可以自动挂载</span><br></pre></td></tr></table></figure></li>
 <li><p>虚拟机增加硬盘步骤1</p>
 <p>在【虚拟机】菜单中，选择【设置】，然后设备列表里添加硬盘，然后一路【下一步】，中间只有选择磁盘大小的地方需要修改，指导完成。然后<strong>重启系统</strong>才能识别。</p>
 </li>
 <li><p>虚拟机增加硬盘步骤2<br> 分区命令：fdisk  /dev/sdb<br> 开始对/sdb分区<br> m  显示命令列表</p>
 <ul>
-<li><p>p   显示磁盘分区  同 fdisk  -l</p>
-<p>n   新增分区</p>
-<p>d   删除分区</p>
-<p>w  写入并退出</p>
-<p>说明：开始分区后输入n，新增分区，然后选择p，分区类型为主分区。两次回车默认剩余全部空间。最后输入w写入分区并退出，若不保存退出输入q</p>
-</li>
+<li>p   显示磁盘分区  同 fdisk  -ln   新增分区d   删除分区w  写入并退出说明：开始分区后输入n，新增分区，然后选择p，分区类型为主分区。两次回车默认剩余全部空间。最后输入w写入分区并退出，若不保存退出输入q</li>
 </ul>
 </li>
 <li><p>虚拟机增加硬盘步骤3<br> 格式化磁盘<br> 分区命令：#mkfs  -t  ext4  /dev/sdb1<br> 其中ext4是分区类型</p>
@@ -554,9 +538,7 @@
 <p>基本语法：</p>
 <figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="attribute">df   -h</span></span><br></pre></td></tr></table></figure></li>
 <li><p>查询指定目录的磁盘占用情况<br>基本语法：du  -h  /目录<br>查询指定目录的磁盘占用情况，默认为当前目录</p>
-<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-s  指定目录占用大小汇总</span></span><br><span class="line"><span class="deletion">-h  带计量单位</span></span><br><span class="line"><span class="deletion">-a  含文件</span></span><br><span class="line"><span class="deletion">--max-depth=1  子目录深度</span></span><br><span class="line"><span class="deletion">-c  列出明细的同时，增加汇总值</span></span><br></pre></td></tr></table></figure>
-
-</li>
+<figure class="highlight diff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="deletion">-s  指定目录占用大小汇总</span></span><br><span class="line"><span class="deletion">-h  带计量单位</span></span><br><span class="line"><span class="deletion">-a  含文件</span></span><br><span class="line"><span class="deletion">--max-depth=1  子目录深度</span></span><br><span class="line"><span class="deletion">-c  列出明细的同时，增加汇总值</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 <h4 id="7-3-2工作实用指令"><a href="#7-3-2工作实用指令" class="headerlink" title="7.3.2工作实用指令"></a>7.3.2工作实用指令</h4><ul>
 <li><p>1.统计/opt文件夹下的文件个数</p>
@@ -612,8 +594,7 @@
 </code></pre>
 </li>
 <li><p>  ifcfg-ens33 文件说明</p>
-<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">DEVICE</span>=eth0   <span class="comment">#接口名(设备,网卡)</span></span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>C:<span class="number">2</span>x:<span class="number">6</span>x:<span class="number">0</span>x:xx   <span class="comment">#MAC地址</span></span><br><span class="line"><span class="attr">TYPE</span>= Ethernet    <span class="comment">#网络类型(通常是 Ethemet)</span></span><br><span class="line"><span class="attr">UUID</span>=<span class="number">926</span>a57ba-<span class="number">92</span>c6-<span class="number">4231</span>-bacb-f27e5e6a9f44   <span class="comment">#随机id</span></span><br><span class="line"><span class="comment">#系统启动的时候网络接口是否有效(yes/no)</span></span><br><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span></span><br><span class="line"><span class="comment">#IP的配置方法[none|static|bootp|dhcp](引导时不使用协议|静态分配IP|BOOTP协议|DHCP协议)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">BOOTPROTO</span>= static</span><br><span class="line"><span class="comment">#IP地址</span></span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">200.130</span></span><br><span class="line"><span class="comment">#网关</span></span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>,<span class="number">200.2</span></span><br><span class="line"><span class="comment">#域名解析器</span></span><br><span class="line"><span class="attr">DNSI</span>=<span class="number">192.168</span>.<span class="number">200.2</span></span><br></pre></td></tr></table></figure>
-</li>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">DEVICE</span>=eth0   <span class="comment">#接口名(设备,网卡)</span></span><br><span class="line"><span class="attr">HWADDR</span>=<span class="number">00</span>:<span class="number">0</span>C:<span class="number">2</span>x:<span class="number">6</span>x:<span class="number">0</span>x:xx   <span class="comment">#MAC地址</span></span><br><span class="line"><span class="attr">TYPE</span>= Ethernet    <span class="comment">#网络类型(通常是 Ethemet)</span></span><br><span class="line"><span class="attr">UUID</span>=<span class="number">926</span>a57ba-<span class="number">92</span>c6-<span class="number">4231</span>-bacb-f27e5e6a9f44   <span class="comment">#随机id</span></span><br><span class="line"><span class="comment">#系统启动的时候网络接口是否有效(yes/no)</span></span><br><span class="line"><span class="attr">ONBOOT</span>=<span class="literal">yes</span></span><br><span class="line"><span class="comment">#IP的配置方法[none|static|bootp|dhcp](引导时不使用协议|静态分配IP|BOOTP协议|DHCP协议)</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="attr">BOOTPROTO</span>= static</span><br><span class="line"><span class="comment">#IP地址</span></span><br><span class="line"><span class="attr">IPADDR</span>=<span class="number">192.168</span>.<span class="number">200.130</span></span><br><span class="line"><span class="comment">#网关</span></span><br><span class="line"><span class="attr">GATEWAY</span>=<span class="number">192.168</span>,<span class="number">200.2</span></span><br><span class="line"><span class="comment">#域名解析器</span></span><br><span class="line"><span class="attr">DNSI</span>=<span class="number">192.168</span>.<span class="number">200.2</span></span><br></pre></td></tr></table></figure></li>
 <li><p>重启网络服务或者重启系统生效</p>
 <p>service  network  restart       ,  reboot</p>
 </li>
@@ -622,11 +603,8 @@
 
 <h4 id="8-7-2设置hosts映射"><a href="#8-7-2设置hosts映射" class="headerlink" title="8.7.2设置hosts映射"></a>8.7.2设置hosts映射</h4><p>:question:如何通过主机名能够找到 (比如 ping) 某个 linux 系统？</p>
 <ul>
-<li><p>windows<br>在 C:\windows\System32\drivers\etc\hosts     文件指定即可<br>案例：192.168.200.130   Arthur</p>
-</li>
-<li><p>linux<br>在 /etc/hosts  文件指定</p>
-<p>案例：192.168.200.1  ThinkPad-PC</p>
-</li>
+<li>windows<br>在 C:\windows\System32\drivers\etc\hosts     文件指定即可<br>案例：192.168.200.130   Arthur</li>
+<li>linux<br>在 /etc/hosts  文件指定案例：192.168.200.1  ThinkPad-PC</li>
 </ul>
 <h3 id="8-8主机名解析过程分析-Hosts-DNS"><a href="#8-8主机名解析过程分析-Hosts-DNS" class="headerlink" title="8.8主机名解析过程分析(Hosts ,DNS)"></a>8.8主机名解析过程分析(Hosts ,DNS)</h3><h4 id="8-8-1-Hosts-是什么"><a href="#8-8-1-Hosts-是什么" class="headerlink" title="8.8.1 Hosts 是什么"></a>8.8.1 Hosts 是什么</h4><p>   一个文本文件，用来记录IP和Hostname(主机名)的映射关系</p>
 <h4 id="8-8-2-DNS"><a href="#8-8-2-DNS" class="headerlink" title="8.8.2 DNS"></a>8.8.2 DNS</h4><p>   DNS,就是 Domain Name System的缩写,翻译过来就是域名系统,是互联网上作为域名和IP地址相互映射的一个分布式数据库</p>
@@ -815,14 +793,14 @@
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
-          <a href="/archives/">
+          <a href="/archives">
         
           <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
-            <a href="/tags/">
+            <a href="/tags">
           
         <span class="site-state-item-count">1</span>
         <span class="site-state-item-name">标签</span></a>
@@ -894,12 +872,12 @@
   </span>
   <span class="author" itemprop="copyrightHolder">Raint</span>
 </div>
-  <!-- <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  <!-- <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
   </div>
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共7.9k字</span>
+  <span class="post-count">博客全站共7.8k字</span>
 </div>
 
 
