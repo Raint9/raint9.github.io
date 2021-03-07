@@ -4,18 +4,60 @@
   xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>荒古遗迹</title>
-    <link>http://raint9.github.io/</link>
+    <link>http://raint9.tk/</link>
     
-    <atom:link href="http://raint9.github.io/rss2.xml" rel="self" type="application/rss+xml"/>
+    <atom:link href="http://raint9.tk/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>平凡的脚步也可以走出伟大的行程</description>
-    <pubDate>Sat, 27 Feb 2021 10:42:50 GMT</pubDate>
+    <pubDate>Sun, 07 Mar 2021 13:01:26 GMT</pubDate>
     <generator>http://hexo.io/</generator>
     
     <item>
-      <title>Linux-CentOS</title>
-      <link>http://raint9.github.io/2021/02/26/linux-centos7.6/</link>
-      <guid>http://raint9.github.io/2021/02/26/linux-centos7.6/</guid>
+      <title>C++心得体会</title>
+      <link>http://raint9.tk/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</link>
+      <guid>http://raint9.tk/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/</guid>
+      <pubDate>Sun, 07 Mar 2021 11:51:03 GMT</pubDate>
+      
+      <description>关于我学习C++的一些心得体会与细节</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="一-explicit-初始化列表"><a href="#一-explicit-初始化列表" class="headerlink" title="一.explicit,初始化列表"></a>一.explicit,初始化列表</h2><h3 id="隐式转换与-explicit"><a href="#隐式转换与-explicit" class="headerlink" title="隐式转换与 explicit"></a>隐式转换与 explicit</h3><p>关键词explicit可以使函数避免进行隐式转换<br>例如Time time=5; 对象time是不会等于5的，其中有隐式转换，加上explicit可以禁止掉。<br>一般对于单参数的构造函数，都声明为explicit，除非有特别原因。</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">int</span> num;</span><br><span class="line">   <span class="comment">/*explicit*/</span> Time(<span class="keyword">int</span> a) <span class="comment">//当存在explicit时，不可进行隐式转换</span></span><br><span class="line">   &#123;</span><br><span class="line">     num=a;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">Time time=<span class="number">5</span>; <span class="comment">//隐式转换</span></span><br><span class="line"><span class="built_in">cout</span>&lt;&lt;time.num&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="构造函数初始化列表"><a href="#构造函数初始化列表" class="headerlink" title="构造函数初始化列表"></a>构造函数初始化列表</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">int</span> num0,num1,num2;</span><br><span class="line">   Time(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c):num0(a),num1(b),num2(c)&#123;&#125;</span><br><span class="line">   <span class="comment">//初始化列表赋值提升效率，避免了初始化之后的赋值动作</span></span><br><span class="line">   <span class="comment">//其实就算不给初始值，系统也会给随机初值</span></span><br><span class="line">   <span class="comment">//假如初始化父类father，可以father(a,b),num1(c)   ...</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure><h2 id="二-inline-const-mutable-this-static"><a href="#二-inline-const-mutable-this-static" class="headerlink" title="二.inline,const,mutable,this,static"></a>二.inline,const,mutable,this,static</h2><h3 id="在类定义中实现成员函数inline"><a href="#在类定义中实现成员函数inline" class="headerlink" title="在类定义中实现成员函数inline"></a>在类定义中实现成员函数inline</h3><p>在类定义中实现函数inline：类内的成员实现其实也叫类内的成员函数定义</p><h3 id="成员函数末尾的const"><a href="#成员函数末尾的const" class="headerlink" title="成员函数末尾的const"></a>成员函数末尾的const</h3><p>const : 常量，在成员函数后面加上一个const。不但要在函数声明中增加const，定义中也要。<br>作用 : 告诉系统，这个成员函数不会修改该对象里任何成员变量的值等等。<br>tip:假如 const Time time; 那么整个对象里的成员函数后面只要没有const，都不可以调用</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">int</span> num0,num1,num2;</span><br><span class="line">   Time(<span class="keyword">int</span> a,<span class="keyword">int</span> b,<span class="keyword">int</span> c):num0(a),num1(b),num2(c)&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">test</span><span class="params">()</span><span class="keyword">const</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Time::test</span><span class="params">()</span> <span class="keyword">const</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    num0=<span class="number">5</span>;<span class="comment">//爆红显示错误:必须是修改的左值</span></span><br><span class="line">  <span class="comment">/*code*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="mutable"><a href="#mutable" class="headerlink" title="mutable"></a>mutable</h3><h3 id="返回自身对象的引用，this"><a href="#返回自身对象的引用，this" class="headerlink" title="返回自身对象的引用，this"></a>返回自身对象的引用，this</h3><h3 id="static成员"><a href="#static成员" class="headerlink" title="static成员"></a>static成员</h3>]]></content:encoded>
+      
+      
+      
+      <category domain="http://raint9.tk/tags/C/">C++</category>
+      
+      
+      <comments>http://raint9.tk/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Hexo-blog(更新ing)</title>
+      <link>http://raint9.tk/2021/03/03/hexo-blog/</link>
+      <guid>http://raint9.tk/2021/03/03/hexo-blog/</guid>
+      <pubDate>Wed, 03 Mar 2021 11:43:13 GMT</pubDate>
+      
+      <description>关于我的博客</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="1-注册Github"><a href="#1-注册Github" class="headerlink" title="1.注册Github"></a>1.注册Github</h1><p>1.进入<a href="https://github.com/">GitHub官网</a></p><p>2.点击sign up注册账号</p><p>3.创建仓库/项目：</p><ul><li> a.点击头像左侧 “+”，New repository.         </li><li> b.仓库名称：你的名字.github.io</li><li> c.public</li><li> d.Initizalize this repository with a README(初始化仓库)；</li><li> e.create repository</li></ul><h1 id="2-Git-的安装"><a href="#2-Git-的安装" class="headerlink" title="2.Git 的安装"></a>2.Git 的安装</h1><p>1.首先你要去<a href="https://git-scm.com/">git官网</a></p><p>2.点击Dowmlocads</p><p>3.下载完成后</p><ul><li><p>a.点击next;</p></li><li><p>b.browse(选择安装位置)，</p></li><li><p>c.Additional icons/on the Desktop</p></li><li><p>d.use Vim(the ubiquitous text editor)…..(默认使用vim).next</p></li><li><p>e.Git from the command line ……</p></li><li><p>f.use the OpenSSL library</p></li><li><p>g.Checkout Windows-style……</p></li><li><p>h.using MinTTY…….</p></li><li><p>i.Enable files…./Enable Git  两项全选上</p></li><li><p>j.右键 Git Bash,输入git –version,若显示版本，则安装成功，若没显示，可以先重启电脑，也可能安装失败</p><p>​     </p></li></ul><h1 id="3"><a href="#3" class="headerlink" title="3."></a>3.</h1>]]></content:encoded>
+      
+      
+      
+      <category domain="http://raint9.tk/tags/blog/">blog</category>
+      
+      
+      <comments>http://raint9.tk/2021/03/03/hexo-blog/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Linux-CentOS(更新ing)</title>
+      <link>http://raint9.tk/2021/02/26/linux-centos7.6/</link>
+      <guid>http://raint9.tk/2021/02/26/linux-centos7.6/</guid>
       <pubDate>Thu, 25 Feb 2021 18:45:15 GMT</pubDate>
       
       <description>这是一篇基于centos7.6的基础笔记</description>
@@ -26,17 +68,17 @@
       
       
       
-      <category domain="http://raint9.github.io/tags/Linux/">Linux</category>
+      <category domain="http://raint9.tk/tags/Linux/">Linux</category>
       
       
-      <comments>http://raint9.github.io/2021/02/26/linux-centos7.6/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/02/26/linux-centos7.6/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Hello World</title>
-      <link>http://raint9.github.io/2021/02/26/hello-world/</link>
-      <guid>http://raint9.github.io/2021/02/26/hello-world/</guid>
+      <link>http://raint9.tk/2021/02/26/hello-world/</link>
+      <guid>http://raint9.tk/2021/02/26/hello-world/</guid>
       <pubDate>Thu, 25 Feb 2021 16:17:52 GMT</pubDate>
       
       <description>hexo自带的文件</description>
@@ -48,7 +90,7 @@
       
       
       
-      <comments>http://raint9.github.io/2021/02/26/hello-world/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/02/26/hello-world/#disqus_thread</comments>
       
     </item>
     
