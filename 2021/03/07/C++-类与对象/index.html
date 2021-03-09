@@ -31,7 +31,7 @@
 <meta property="og:description" content="关于我学习C++的一些心得体会与细节">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-07T11:51:03.051Z">
-<meta property="article:modified_time" content="2021-03-07T13:44:51.957Z">
+<meta property="article:modified_time" content="2021-03-09T17:18:49.180Z">
 <meta property="article:author" content="Raint">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -229,10 +229,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2021-03-07 19:51:03 / 修改时间：21:44:51" itemprop="dateCreated datePublished" datetime="2021-03-07T19:51:03+08:00">2021-03-07</time>
+              <time title="创建时间：2021-03-07 19:51:03" itemprop="dateCreated datePublished" datetime="2021-03-07T19:51:03+08:00">2021-03-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-10 01:18:49" itemprop="dateModified" datetime="2021-03-10T01:18:49+08:00">2021-03-10</time>
+              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -276,7 +282,24 @@
 <h3 id="static成员"><a href="#static成员" class="headerlink" title="static成员"></a>static成员</h3><p>static成员不赋初值的话，系统自动赋值为0；<br>1.局部静态变量</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">int</span> abc =<span class="number">6</span>;<span class="comment">//局部静态变量</span></span><br><span class="line">   <span class="comment">//abc在静态区，当函数被调用完，abc不会被释放，意味着abc的值依旧是6；</span></span><br><span class="line">   </span><br><span class="line">    abc=<span class="number">8</span>;</span><br><span class="line">   <span class="comment">//此时abc=8,第二次调用该函数的时候上面的satic...就不执行了。</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>2.全局静态变量</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> g_abc=<span class="number">15</span>;<span class="comment">//也保存在静态存储区</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> <span class="keyword">int</span> g_abc=<span class="number">15</span>;<span class="comment">//也保存在静态存储区</span></span><br><span class="line"><span class="comment">//这种变量只在单个文件内能用</span></span><br></pre></td></tr></table></figure>
+
+<p>有属于整个类的成员变量，这种成员变量叫static成员变量<br>特点：不属于某个对象，属于整个类，我们一旦在某个对象中修改了这个成员变量的值，在其他对象中直接能够看到修改结果。<br>这种成员变量只有一个副本，对于这种变量的引用，我们用的是类名::变量名。</p>
+<p><strong>定义实现的时候函数或者变量都不加static<br>静态函数只能修改静态变量</strong><br>定义分配内存：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> Time::mystatic=<span class="number">1</span>;</span><br><span class="line"><span class="comment">//静态变量定义分配内存，定义的时候不加static，可以不给初值。</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">static</span> <span class="keyword">int</span> mystatic;<span class="comment">//声明静态变量</span></span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+
+
+
+
+<h2 id="四-拷贝构造函数"><a href="#四-拷贝构造函数" class="headerlink" title="四.拷贝构造函数"></a>四.拷贝构造函数</h2><h3 id="1-从一个函数返回一个对象"><a href="#1-从一个函数返回一个对象" class="headerlink" title="1.从一个函数返回一个对象"></a>1.从一个函数返回一个对象</h3><p>1.默认情况下，类对象的拷贝是每个成员变量逐个拷贝；<br>2.如果一个类的构造函数的第一个参数是所属类型的类类型引用，如果还有其他额外参数，那么这些额外的参数还都有默认值，则这个构造函数就叫做拷贝构造函数<br>3.函数默认参数必须放在函数声明中，除非该函数没有函数声明<br>4.拷贝构造函数的作用：会在一定的时机被系统自动调用</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">  Time()&#123;&#125;</span><br><span class="line">  Time(<span class="keyword">const</span> Time&amp;tmp,<span class="keyword">int</span> num=<span class="number">10</span>)&#123;&#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>举个栗子:</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Time myTime;     <span class="comment">//调用构造函数</span></span><br><span class="line">Time myTime2 = myTime;    <span class="comment">//调用拷贝构造函数</span></span><br><span class="line"><span class="function">Time <span class="title">myTime3</span><span class="params">(myTime)</span></span>;     <span class="comment">//调用拷贝构造函数</span></span><br><span class="line">Time myTime4&#123;myTime&#125;;      <span class="comment">//调用调用拷贝构造函数</span></span><br><span class="line">Time myTime5=&#123;myTime&#125;;     <span class="comment">//调用拷贝构造函数</span></span><br><span class="line"></span><br><span class="line">Time myTime6;              <span class="comment">//调用构造函数       </span></span><br><span class="line">myTime6=myTime5;           <span class="comment">//调用了移动函数</span></span><br></pre></td></tr></table></figure>
+<p><strong>拷贝构造函数调用的时候是把已经创建了的对象赋(拷贝)给正在创建的对象,myTime6是已经创建好的，所以没有拷贝构造</strong></p>
+<p>1.建议拷贝构造函数第一个参数总是带着const。<br>2.explicit:拷贝构造函数一般不要声明成explicit。</p>
+<p>还有一些情况会发生拷贝鼓噪函数的调用<br>(a)将一个对象作为实参传递给一个非引用类型的形参<br>(b)代码如下：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Time <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Time tmptime;</span><br><span class="line">   <span class="keyword">return</span> tmptime;    <span class="comment">//系统产生了临时对象并且调用了类的拷贝构造函数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Time time=func(); <span class="comment">//返回给time的是临时对象，time接收了它</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
     </div>
 
     
@@ -436,7 +459,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-explicit-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">一.explicit,初始化列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E-explicit"><span class="nav-number">1.1.</span> <span class="nav-text">隐式转换与 explicit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">构造函数初始化列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-inline-const-mutable-this-static"><span class="nav-number">2.</span> <span class="nav-text">二.inline,const,mutable,this,static</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%B1%BB%E5%AE%9A%E4%B9%89%E4%B8%AD%E5%AE%9E%E7%8E%B0%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0inline"><span class="nav-number">2.1.</span> <span class="nav-text">在类定义中实现成员函数inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E6%9C%AB%E5%B0%BE%E7%9A%84const"><span class="nav-number">2.2.</span> <span class="nav-text">成员函数末尾的const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mutable"><span class="nav-number">2.3.</span> <span class="nav-text">mutable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E8%87%AA%E8%BA%AB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%EF%BC%8Cthis"><span class="nav-number">2.4.</span> <span class="nav-text">返回自身对象的引用，this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static%E6%88%90%E5%91%98"><span class="nav-number">2.5.</span> <span class="nav-text">static成员</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%80-explicit-%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">一.explicit,初始化列表</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E4%B8%8E-explicit"><span class="nav-number">1.1.</span> <span class="nav-text">隐式转换与 explicit</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E5%88%9D%E5%A7%8B%E5%8C%96%E5%88%97%E8%A1%A8"><span class="nav-number">1.2.</span> <span class="nav-text">构造函数初始化列表</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BA%8C-inline-const-mutable-this-static"><span class="nav-number">2.</span> <span class="nav-text">二.inline,const,mutable,this,static</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%9C%A8%E7%B1%BB%E5%AE%9A%E4%B9%89%E4%B8%AD%E5%AE%9E%E7%8E%B0%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0inline"><span class="nav-number">2.1.</span> <span class="nav-text">在类定义中实现成员函数inline</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%87%BD%E6%95%B0%E6%9C%AB%E5%B0%BE%E7%9A%84const"><span class="nav-number">2.2.</span> <span class="nav-text">成员函数末尾的const</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#mutable"><span class="nav-number">2.3.</span> <span class="nav-text">mutable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E8%BF%94%E5%9B%9E%E8%87%AA%E8%BA%AB%E5%AF%B9%E8%B1%A1%E7%9A%84%E5%BC%95%E7%94%A8%EF%BC%8Cthis"><span class="nav-number">2.4.</span> <span class="nav-text">返回自身对象的引用，this</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#static%E6%88%90%E5%91%98"><span class="nav-number">2.5.</span> <span class="nav-text">static成员</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%9B%9B-%E6%8B%B7%E8%B4%9D%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0"><span class="nav-number">3.</span> <span class="nav-text">四.拷贝构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E4%BB%8E%E4%B8%80%E4%B8%AA%E5%87%BD%E6%95%B0%E8%BF%94%E5%9B%9E%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1"><span class="nav-number">3.1.</span> <span class="nav-text">1.从一个函数返回一个对象</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -534,7 +557,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共8.9k字</span>
+  <span class="post-count">博客全站共9.6k字</span>
 </div>
 
 
