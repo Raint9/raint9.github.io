@@ -9,8 +9,54 @@
     <atom:link href="http://raint9.tk/rss2.xml" rel="self" type="application/rss+xml"/>
     
     <description>平凡的脚步也可以走出伟大的行程</description>
-    <pubDate>Thu, 11 Mar 2021 15:14:26 GMT</pubDate>
+    <pubDate>Thu, 11 Mar 2021 17:02:59 GMT</pubDate>
     <generator>http://hexo.io/</generator>
+    
+    <item>
+      <title>Java核心类(补)</title>
+      <link>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/</link>
+      <guid>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/</guid>
+      <pubDate>Thu, 11 Mar 2021 16:58:10 GMT</pubDate>
+      
+      <description>一篇关于下载并安装Java开源IDE软件eclipse的教程</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h1 id="eclipse的安装"><a href="#eclipse的安装" class="headerlink" title="eclipse的安装"></a>eclipse的安装</h1><h3 id="一-eclipse下载"><a href="#一-eclipse下载" class="headerlink" title="一.eclipse下载"></a>一.eclipse下载</h3><p><a href="https://www.eclipse.org/downloads/packages/">官网下载地址</a><br>找到第一个区域：Eclipse IDE Java Developers<br>1.根据自己电脑的操作系统选择下载，例如Windows下载点击右边的<strong>Windows x86_64</strong>。</p><p>2.进入后别急着下载，点击<strong>Select Another Mirror</strong>去更换下载镜像源找到China开头的并点击(如果你不想下载极慢的话请不要忽略这一步，具体原因因不可抗力不可说)</p><h3 id="二-eclipse的安装与配置"><a href="#二-eclipse的安装与配置" class="headerlink" title="二.eclipse的安装与配置"></a>二.eclipse的安装与配置</h3><p>1.下载完得到压缩包，解压到你想解压的地方，那将是你的软件的存放地点。</p><p>2.(选)双击进入文件夹,给<strong>eclipse.exe</strong>创建桌面快捷方式,方便下次打开</p><p>3.双击eclipse.exe运行，然后设置workspace的路径，这将是你以后项目的存放空间。</p><p>4.(选)创建项目后，记得把jdk换成jdk8,也就是你安装后的jdk版本。</p><p>5.(选)你可以给软件进行汉化</p><ul><li>点击<strong>help</strong>&gt;&gt;<strong>Install New Software</strong></li><li>进入<a href="http://www.eclipse.org/babel/">语言包官网</a>，点击Download</li><li>复制<strong>Babel Language Pack Update Site for 2020-12</strong>的链接</li><li>点击<strong>Add</strong>,把复制好的链接粘贴到第二行Location里，&gt;&gt; OK</li><li>此时看到“Pending…”即正在等待中，用户等待片刻便会看到软件检索到的语言包列表，下拉垂直滚动条，选择“for eclipse”下的Chinese Simplified(简体中文)包，点击“next”按钮进入下一步。</li><li>勾选第一个“I accept…”单选框，点击“Finish”按钮完成设置。</li><li>之后，弹出“正在安装”窗体，用户等待片刻后，在弹出的“Security Warning”窗体中点击“OK”按钮，之后在弹出的又一窗体“Software Updates”中点击“Restart Now”按钮完成语言包的安装并重启eclipse。</li><li>重启eclipse &gt;&gt; 完成</li></ul>]]></content:encoded>
+      
+      
+      
+      <category domain="http://raint9.tk/tags/Java/">Java</category>
+      
+      <category domain="http://raint9.tk/tags/Raint/">Raint</category>
+      
+      
+      <comments>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/#disqus_thread</comments>
+      
+    </item>
+    
+    <item>
+      <title>Java核心类(补)</title>
+      <link>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <guid>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <pubDate>Thu, 11 Mar 2021 16:58:10 GMT</pubDate>
+      
+      <description>一篇基于jdk1.8来配置java开发环境的教程</description>
+      
+      
+      
+      <content:encoded><![CDATA[<h2 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h2><h3 id="jdk，jre与jvm"><a href="#jdk，jre与jvm" class="headerlink" title="jdk，jre与jvm"></a>jdk，jre与jvm</h3><ul><li>Java development kit                             java开发工具包 </li><li>jdkJava Runtime Environment                      java运行环境  jre</li><li>Java Virtual Machine                      java虚拟机  jvm</li></ul><h3 id="jdk1-8安装"><a href="#jdk1-8安装" class="headerlink" title="jdk1.8安装"></a>jdk1.8安装</h3><h4 id="1-jdk下载"><a href="#1-jdk下载" class="headerlink" title="1.jdk下载"></a>1.jdk下载</h4><p>​         <a href="https://www.oracle.com/java/technologies/javase-downloads.html">官网下载</a> （推荐）：程序员应该勇于自己尝试<br>​         <a href="http://pan.baidu.com/s/1dFunMsp">百度网盘下载</a><br>官网下载：找到<strong>Java SE 8</strong>区域右边的<strong>JDK Download</strong>，进入后找到<strong>Java SE Development Kit 8u281</strong>区域，选择适合自己系统的版本，这里针对windows系统，故选择<strong>Windows x64</strong></p><p>tips: 为了下面与我的一致，推荐改jdk安装路径为名为jdk8，同目录下的jre为jre8</p><h4 id="2-新建系统变量：-JAVA-HOME"><a href="#2-新建系统变量：-JAVA-HOME" class="headerlink" title="2. 新建系统变量： JAVA_HOME"></a>2. 新建系统变量： JAVA_HOME</h4><pre><code> E:\xxx\jdk8  (这里我是E盘，视自己情况而定)</code></pre><h4 id="3-在系统变量Path后追加"><a href="#3-在系统变量Path后追加" class="headerlink" title="3.在系统变量Path后追加"></a>3.在系统变量Path后追加</h4><pre><code> %JAVA_HOME%\bin</code></pre><h4 id="4-添加classpath-选"><a href="#4-添加classpath-选" class="headerlink" title="4. 添加classpath(选)"></a>4. 添加classpath(选)</h4><p>如果你不喜欢用记事本，想用集成环境，比如eclipse，IDEA或者vscode：<br>     CLASSPATH<br>    .;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</p><h4 id="5-验证"><a href="#5-验证" class="headerlink" title="5.验证"></a>5.验证</h4><figure class="highlight taggerscript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Microsoft Windows [版本 10.0.18363.592]</span><br><span class="line">(c) 2019 Microsoft Corporation。保留所有权利。</span><br><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\r</span>aint&gt;javac -version</span><br><span class="line">javac 1.8.0_241</span><br><span class="line"></span><br><span class="line">C:<span class="symbol">\U</span>sers<span class="symbol">\r</span>aint&gt;</span><br></pre></td></tr></table></figure>]]></content:encoded>
+      
+      
+      
+      <category domain="http://raint9.tk/tags/Java/">Java</category>
+      
+      <category domain="http://raint9.tk/tags/Raint/">Raint</category>
+      
+      
+      <comments>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#disqus_thread</comments>
+      
+    </item>
     
     <item>
       <title>MySQL语法</title>
@@ -105,21 +151,6 @@
     </item>
     
     <item>
-      <title></title>
-      <link>http://raint9.tk/2021/03/11/%E5%8F%8D%E5%B0%84/</link>
-      <guid>http://raint9.tk/2021/03/11/%E5%8F%8D%E5%B0%84/</guid>
-      <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
-      
-      
-      
-      
-      
-      
-      <comments>http://raint9.tk/2021/03/11/%E5%8F%8D%E5%B0%84/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
       <title>多线程</title>
       <link>http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
       <guid>http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
@@ -194,32 +225,11 @@
       <guid>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
-      <description>&lt;h1 id=&quot;类的实例化数组&quot;&gt;&lt;a href=&quot;#类的实例化数组&quot; class=&quot;headerlink&quot; title=&quot;类的实例化数组&quot;&gt;&lt;/a&gt;类的实例化数组&lt;/h1&gt;&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;5&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;6&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;7&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;8&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;9&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;10&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;11&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;12&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;//类的实例化数组，每一个都需要单独创建&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;class&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;A&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(String[] args)&lt;/span&gt; &lt;/span&gt;&amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    A[] array = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; A[&lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;];&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &lt;span class=&quot;keyword&quot;&gt;for&lt;/span&gt;(&lt;span class=&quot;keyword&quot;&gt;int&lt;/span&gt; i = &lt;span class=&quot;number&quot;&gt;0&lt;/span&gt;; i &amp;lt; &lt;span class=&quot;number&quot;&gt;10&lt;/span&gt;; i++) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        array[i] = &lt;span class=&quot;keyword&quot;&gt;new&lt;/span&gt; A();		&lt;span class=&quot;comment&quot;&gt;//必须单独创建	&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;        array[i] = i+&lt;span class=&quot;number&quot;&gt;1&lt;/span&gt;;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;    &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;&amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;h1 id=&quot;注意int-int的情况&quot;&gt;&lt;a href=&quot;#注意int-int的情况&quot; class=&quot;headerlink&quot; title=&quot;注意int/int的情况&quot;&gt;&lt;/a&gt;注意int/int的情况&lt;/h1&gt;</description>
+      <description>这是一篇关于Java错误篇的笔记，感谢好友菊丸栗子提供的帮助</description>
       
       
       
       <content:encoded><![CDATA[<h1 id="类的实例化数组"><a href="#类的实例化数组" class="headerlink" title="类的实例化数组"></a>类的实例化数组</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//类的实例化数组，每一个都需要单独创建</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">A</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    A[] array = <span class="keyword">new</span> A[<span class="number">10</span>];</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        array[i] = <span class="keyword">new</span> A();<span class="comment">//必须单独创建</span></span><br><span class="line">        array[i] = i+<span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h1 id="注意int-int的情况"><a href="#注意int-int的情况" class="headerlink" title="注意int/int的情况"></a>注意int/int的情况</h1>]]></content:encoded>
-      
-      
-      
-      
-      <comments>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/#disqus_thread</comments>
-      
-    </item>
-    
-    <item>
-      <title>测试</title>
-      <link>http://raint9.tk/2021/03/11/%E6%B5%8B%E8%AF%95/</link>
-      <guid>http://raint9.tk/2021/03/11/%E6%B5%8B%E8%AF%95/</guid>
-      <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
-      
-      <description>这是一篇关于Java测试篇的笔记，感谢好友菊丸栗子提供的帮助</description>
-      
-      
-      
-      <content:encoded><![CDATA[<h1 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h1><p>什么是框架？</p><p>​    ——框架是前人们再实战研发中设计的一些优良的设计方案或成型的代码功能，作为一个完整的技术体系发行出来就是框架</p><p>单元测试经典框架：Junit</p><h1 id="Junit"><a href="#Junit" class="headerlink" title="Junit"></a>Junit</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>Junit是Java语言编写的第三方单元测试框架</p><p>Junit框架的方案可以帮助我们方便快速的测试我们的代码正确性</p><p>单元：Java中，一个类就是一个单元</p><p>单元测试：用Junit编写一小段代码用来对某个类中的方法进行功能测试或业务逻辑测试</p><p>Junit框架的作用：</p><p>​    用来对类中的方法功能进行有目的的测试，以保证程序的正确性和稳定性</p><p>​    可以测试独立方法或者所有方法的预期正确性</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="规范："><a href="#规范：" class="headerlink" title="规范："></a>规范：</h3><p>1.编写业务类代码</p><p>2.测试类的命名规范一Test开头，业务类类名结尾，使用驼峰命名法</p><p>3.测试类中的测试方法必须以test开头，以业务方法名结尾</p><p>4.方法必须是public修饰，没有返回值返回类型，必须使用注解@Test修饰</p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 创建一个业务代码</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserService</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">login</span><span class="params">(String name, <span class="keyword">int</span> password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (name.equals(<span class="string">&quot;ABC&quot;</span>) &amp;&amp; password == <span class="number">12345</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="string">&quot;success&quot;</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;用户名或密码存在问题&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 创建测试类</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TestUserService</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Test</span></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 测试代码的要求：</span></span><br><span class="line"><span class="comment">     * 1.必须是public</span></span><br><span class="line"><span class="comment">     * 2.没有返回值没有参数列表</span></span><br><span class="line"><span class="comment">     * 3.必须有Test注解</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="comment">// 测试方法</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testLogin</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        UserService us = <span class="keyword">new</span> UserService();</span><br><span class="line">        String sr = us.login(<span class="string">&quot;ABC&quot;</span>, <span class="number">12345</span>);</span><br><span class="line">        <span class="comment">// 使用断言</span></span><br><span class="line">        <span class="comment">/**</span></span><br><span class="line"><span class="comment">         * public static void assertEquals(String message, Object expected, Object actual)</span></span><br><span class="line"><span class="comment">         * 参数一：业务错误信息</span></span><br><span class="line"><span class="comment">         * 参数二：期望值</span></span><br><span class="line"><span class="comment">         * 参数三：实际值</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        Assert.assertEquals(<span class="string">&quot;业务需求错误&quot;</span>,<span class="string">&quot;success&quot;</span>,sr);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>选中方法名 —&gt; 右键 —&gt; Run</p><p>也可以对整个测试类进行测试</p><h2 id="其他注解"><a href="#其他注解" class="headerlink" title="其他注解"></a>其他注解</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Junit4常用注解</span></span><br><span class="line"><span class="meta">@Test</span> <span class="comment">// 测试方法</span></span><br><span class="line"><span class="meta">@Bfore</span> <span class="comment">// 用来修饰实例方法，该方法会在每一个测试方法执行之前执行一次</span></span><br><span class="line"><span class="meta">@After</span> <span class="comment">// 用来修饰实例方法，该方法会在每一个测试方法执行之后执行一次</span></span><br><span class="line"><span class="meta">@BeforeClass</span> <span class="comment">// 用来修饰静态方法，该方法会在所有测试方法执行之前执行一次</span></span><br><span class="line"><span class="meta">@AfterClass</span> <span class="comment">// 用来修饰静态方法，该方法会在所有测试方法执行之后执行一次</span></span><br></pre></td></tr></table></figure><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Junit5常用注解</span></span><br><span class="line"><span class="meta">@Test</span> <span class="comment">// 测试方法</span></span><br><span class="line"><span class="meta">@BforeEach</span> <span class="comment">// 用来修饰实例方法，该方法会在每一个测试方法执行之前执行一次</span></span><br><span class="line"><span class="meta">@AfterEach</span> <span class="comment">// 用来修饰实例方法，该方法会在每一个测试方法执行之后执行一次</span></span><br><span class="line"><span class="meta">@BeforeAll</span> <span class="comment">// 用来修饰静态方法，该方法会在所有测试方法执行之前执行一次</span></span><br><span class="line"><span class="meta">@Afterall</span> <span class="comment">// 用来修饰静态方法，该方法会在所有测试方法执行之后执行一次</span></span><br></pre></td></tr></table></figure>]]></content:encoded>
       
       
       
@@ -228,7 +238,7 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E6%B5%8B%E8%AF%95/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/#disqus_thread</comments>
       
     </item>
     
