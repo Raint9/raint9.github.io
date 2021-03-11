@@ -23,15 +23,15 @@
     var CONFIG = {"hostname":"raint9.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Stream流引入在Java8种，得益于Lambda表达式所带来的函数式编程，引入了一个全新的Stream流概念，用于解决集合&#x2F;数组类库的以后的弊端。 Stream流能解决的问题 ​    已有集合类库或数组API的弊端 ​    Stream认为集合和数组操作的API很不好用，所以采用了Stream流简化集合和数组的操作！！ 案例： ​    将所有姓张的并且名字长度为3的姓名筛选出来 1234">
+  <meta name="description" content="关于Java的IO流补充笔记，感谢好友菊丸栗子提供的帮助">
 <meta property="og:type" content="article">
-<meta property="og:title" content="荒古遗迹">
+<meta property="og:title" content="IO流引入 - Java - 菊丸栗子">
 <meta property="og:url" content="http://raint9.tk/2021/03/11/Io%E6%B5%81%E5%BC%95%E5%85%A5/index.html">
 <meta property="og:site_name" content="荒古遗迹">
-<meta property="og:description" content="Stream流引入在Java8种，得益于Lambda表达式所带来的函数式编程，引入了一个全新的Stream流概念，用于解决集合&#x2F;数组类库的以后的弊端。 Stream流能解决的问题 ​    已有集合类库或数组API的弊端 ​    Stream认为集合和数组操作的API很不好用，所以采用了Stream流简化集合和数组的操作！！ 案例： ​    将所有姓张的并且名字长度为3的姓名筛选出来 1234">
+<meta property="og:description" content="关于Java的IO流补充笔记，感谢好友菊丸栗子提供的帮助">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-11T13:08:16.002Z">
-<meta property="article:modified_time" content="2020-07-31T15:40:43.764Z">
+<meta property="article:modified_time" content="2021-03-11T15:04:48.297Z">
 <meta property="article:author" content="Raint">
 <meta name="twitter:card" content="summary">
 
@@ -48,7 +48,7 @@
   };
 </script>
 
-  <title> | 荒古遗迹</title>
+  <title>IO流引入 - Java - 菊丸栗子 | 荒古遗迹</title>
   
 
 
@@ -214,26 +214,24 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          IO流引入 - Java - 菊丸栗子
         </h1>
 
         <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
 
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+              <time title="创建时间：2021-03-11 21:08:16 / 修改时间：23:04:48" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 23:40:43" itemprop="dateModified" datetime="2020-07-31T23:40:43+08:00">2020-07-31</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -245,6 +243,11 @@
             </span>
 <p></p>
 
+  <div class="out-img-topic">
+    <img src=/summary_images/lux.jpg class="image-size-400">
+  </div>
+
+            <div class="post-description">关于Java的IO流补充笔记，感谢好友菊丸栗子提供的帮助</div>
 
         </div>
       </header>
@@ -370,7 +373,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://raint9.tk/2021/03/11/Io%E6%B5%81%E5%BC%95%E5%85%A5/" title="">http://raint9.tk/2021/03/11/Io流引入/</a>
+    <a href="http://raint9.tk/2021/03/11/Io%E6%B5%81%E5%BC%95%E5%85%A5/" title="IO流引入 - Java - 菊丸栗子">http://raint9.tk/2021/03/11/Io流引入/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -416,12 +419,12 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/11/Io%E6%B5%81/" rel="prev" title="IO流">
-      <i class="fa fa-chevron-left"></i> IO流
+    <a href="/2021/03/11/Io%E6%B5%81/" rel="prev" title="IO流 - Java - 菊丸栗子">
+      <i class="fa fa-chevron-left"></i> IO流 - Java - 菊丸栗子
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/11/Java%E6%A0%B8%E5%BF%83%E7%B1%BB(%E8%A1%A5%E5%85%85)/" rel="next" title="">
-       <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/11/Java%E5%B8%B8%E7%94%A8%E7%9A%84%E5%85%AB%E7%A7%8D%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E4%B8%8E%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0/" rel="next" title="Java常用的八种排序算法与代码实现 - Java - 菊丸栗子">
+      Java常用的八种排序算法与代码实现 - Java - 菊丸栗子 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -502,14 +505,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -584,7 +587,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共70.3k字</span>
+  <span class="post-count">博客全站共73.6k字</span>
 </div>
 
 

@@ -31,7 +31,7 @@
 <meta property="og:description" content="关于我学习C++的一些心得体会与细节">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-07T11:51:03.051Z">
-<meta property="article:modified_time" content="2021-03-11T14:18:29.979Z">
+<meta property="article:modified_time" content="2021-03-11T14:54:00.060Z">
 <meta property="article:author" content="Raint">
 <meta property="article:tag" content="C++">
 <meta name="twitter:card" content="summary">
@@ -237,7 +237,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-11 22:18:29" itemprop="dateModified" datetime="2021-03-11T22:18:29+08:00">2021-03-11</time>
+                <time title="修改时间：2021-03-11 22:54:00" itemprop="dateModified" datetime="2021-03-11T22:54:00+08:00">2021-03-11</time>
               </span>
 
           
@@ -301,8 +301,8 @@
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Time <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Time tmptime;</span><br><span class="line">   <span class="keyword">return</span> tmptime;    <span class="comment">//系统产生了临时对象并且调用了类的拷贝构造函数</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">  Time time=func(); <span class="comment">//返回给time的是临时对象，time接收了它</span></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h2 id="五-派生类调用顺序，函数遮蔽"><a href="#五-派生类调用顺序，函数遮蔽" class="headerlink" title="五.派生类调用顺序，函数遮蔽"></a>五.派生类调用顺序，函数遮蔽</h2><h3 id="1-派生类对象定义时调用构造函数的顺序"><a href="#1-派生类对象定义时调用构造函数的顺序" class="headerlink" title="1.派生类对象定义时调用构造函数的顺序"></a>1.派生类对象定义时调用构造函数的顺序</h3><p>当定义子类对象时，是要调用父类和子类的构造函数的，而且，父类的构造函数的函数体先执行，子类的构造函数的函数体后执行</p>
 <h2 id="六-基类指针-虚纯虚函数-多态性-虚析构"><a href="#六-基类指针-虚纯虚函数-多态性-虚析构" class="headerlink" title="六.基类指针,虚纯虚函数,多态性,虚析构"></a>六.基类指针,虚纯虚函数,多态性,虚析构</h2><h3 id="1-基类指针-派生类指针"><a href="#1-基类指针-派生类指针" class="headerlink" title="1.基类指针,派生类指针"></a>1.基类指针,派生类指针</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Base</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   <span class="keyword">int</span> num;</span><br><span class="line">   Base()&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;你好&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span>:</span><span class="keyword">public</span> Base</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   Son():Base()&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;HelloWorld&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Base* pbase = <span class="keyword">new</span> Son();</span><br><span class="line">   <span class="comment">//父类指针可以new一个子类对象。父类指针很强大。</span></span><br><span class="line">   pbase-&gt;speak();</span><br><span class="line">   <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Son</span>:</span><span class="keyword">public</span> Base</span><br><span class="line">&#123;</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">   Son():Base()&#123;&#125;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">func</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">   <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;子类的函数&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line">   <span class="function"><span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span></span></span><br><span class="line"><span class="function">   </span>&#123;</span><br><span class="line">      <span class="built_in">cout</span>&lt;&lt;<span class="string">&quot;HelloWorld&quot;</span>&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   Base* pbase = <span class="keyword">new</span> Son();</span><br><span class="line">   <span class="comment">//父类指针可以new一个子类对象。父类指针很强大。</span></span><br><span class="line">   pbase-&gt;speak();</span><br><span class="line">   </span><br><span class="line">   pbase-&gt;func();</span><br><span class="line">   <span class="comment">//错误，虽然是new的子类对象，但是是父类指针，无法调用子类成员</span></span><br><span class="line">  </span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>结果：HelloWorld</p>
 <h3 id="2-虚函数"><a href="#2-虚函数" class="headerlink" title="2.虚函数"></a>2.虚函数</h3><h4 id="override"><a href="#override" class="headerlink" title="override"></a>override</h4><h4 id="final"><a href="#final" class="headerlink" title="final"></a>final</h4><h3 id="3-多态性"><a href="#3-多态性" class="headerlink" title="3.多态性"></a>3.多态性</h3><h3 id="4-纯虚函数"><a href="#4-纯虚函数" class="headerlink" title="4.纯虚函数"></a>4.纯虚函数</h3><h3 id="5-基类的析构函数一般写成虚函数-虚析构函数"><a href="#5-基类的析构函数一般写成虚函数-虚析构函数" class="headerlink" title="5.基类的析构函数一般写成虚函数(虚析构函数)"></a>5.基类的析构函数一般写成虚函数(虚析构函数)</h3>
     </div>
@@ -401,8 +401,8 @@
       <i class="fa fa-chevron-left"></i> Hexo-blog(更新ing)
     </a></div>
       <div class="post-nav-item">
-    <a href="/2021/03/11/%E6%8E%A5%E5%8F%A3/" rel="next" title="">
-       <i class="fa fa-chevron-right"></i>
+    <a href="/2021/03/11/%E6%8E%A5%E5%8F%A3/" rel="next" title="接口">
+      接口 <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -483,14 +483,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -565,7 +565,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共70.3k字</span>
+  <span class="post-count">博客全站共73.6k字</span>
 </div>
 
 

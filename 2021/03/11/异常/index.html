@@ -23,16 +23,18 @@
     var CONFIG = {"hostname":"raint9.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="Error和ExceptionError:严重错误，无法通过处理的错误，一旦出现程序员无能为力，只能重启系统，优化项目。 比如内存崩溃，jvm本身的崩溃。 Exception：异常类，开发中代码在编译或者执行的过程中可能出现的错误，它需要提前处理，以便程序更健壮！ Exception又分为两大类：  RuntimeException以及它的子类； 非RuntimeException（包括IOExc">
+  <meta name="description" content="这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助">
 <meta property="og:type" content="article">
-<meta property="og:title" content="荒古遗迹">
+<meta property="og:title" content="异常">
 <meta property="og:url" content="http://raint9.tk/2021/03/11/%E5%BC%82%E5%B8%B8/index.html">
 <meta property="og:site_name" content="荒古遗迹">
-<meta property="og:description" content="Error和ExceptionError:严重错误，无法通过处理的错误，一旦出现程序员无能为力，只能重启系统，优化项目。 比如内存崩溃，jvm本身的崩溃。 Exception：异常类，开发中代码在编译或者执行的过程中可能出现的错误，它需要提前处理，以便程序更健壮！ Exception又分为两大类：  RuntimeException以及它的子类； 非RuntimeException（包括IOExc">
+<meta property="og:description" content="这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-11T13:08:15.997Z">
-<meta property="article:modified_time" content="2020-07-31T15:40:41.085Z">
+<meta property="article:modified_time" content="2021-03-11T15:10:05.751Z">
 <meta property="article:author" content="Raint">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="菊丸栗子">
 <meta name="twitter:card" content="summary">
 
 <link rel="canonical" href="http://raint9.tk/2021/03/11/%E5%BC%82%E5%B8%B8/">
@@ -48,7 +50,7 @@
   };
 </script>
 
-  <title> | 荒古遗迹</title>
+  <title>异常 | 荒古遗迹</title>
   
 
 
@@ -214,26 +216,24 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          
+          异常
         </h1>
 
         <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
 
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2021-03-11 21:08:15" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:15+08:00">2021-03-11</time>
+              <time title="创建时间：2021-03-11 21:08:15 / 修改时间：23:10:05" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:15+08:00">2021-03-11</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-31 23:40:41" itemprop="dateModified" datetime="2020-07-31T23:40:41+08:00">2020-07-31</time>
-              </span>
 
           
             <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
@@ -245,6 +245,11 @@
             </span>
 <p></p>
 
+  <div class="out-img-topic">
+    <img src=/summary_images/lux.jpg class="image-size-400">
+  </div>
+
+            <div class="post-description">这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助</div>
 
         </div>
       </header>
@@ -381,7 +386,7 @@
   </li>
   <li class="post-copyright-link">
     <strong>本文链接：</strong>
-    <a href="http://raint9.tk/2021/03/11/%E5%BC%82%E5%B8%B8/" title="">http://raint9.tk/2021/03/11/异常/</a>
+    <a href="http://raint9.tk/2021/03/11/%E5%BC%82%E5%B8%B8/" title="异常">http://raint9.tk/2021/03/11/异常/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -420,6 +425,10 @@
 
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/" rel="tag"># 菊丸栗子</a>
+          </div>
 
         
 
@@ -427,8 +436,8 @@
         
     <div class="post-nav">
       <div class="post-nav-item">
-    <a href="/2021/03/11/%E9%80%9A%E4%BF%A1/" rel="prev" title="">
-      <i class="fa fa-chevron-left"></i> 
+    <a href="/2021/03/11/%E9%80%9A%E4%BF%A1/" rel="prev" title="基本结构">
+      <i class="fa fa-chevron-left"></i> 基本结构
     </a></div>
       <div class="post-nav-item">
     <a href="/2021/03/11/API/" rel="next" title="API">
@@ -513,14 +522,14 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">24</span>
+          <span class="site-state-item-count">25</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags">
           
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -595,7 +604,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共70.3k字</span>
+  <span class="post-count">博客全站共73.6k字</span>
 </div>
 
 
