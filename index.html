@@ -198,7 +198,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E4%B8%80)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -212,7 +212,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" class="post-title-link" itemprop="url">C++心得体会</a>
+            <a href="/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E4%B8%80)/" class="post-title-link" itemprop="url">C++心得体会(一)</a>
         </h2>
 
         <div class="post-meta">
@@ -234,7 +234,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-03-10 01:18:49" itemprop="dateModified" datetime="2021-03-10T01:18:49+08:00">2021-03-10</time>
+                <time title="修改时间：2021-03-11 22:18:29" itemprop="dateModified" datetime="2021-03-11T22:18:29+08:00">2021-03-11</time>
               </span>
 
           
@@ -257,7 +257,7 @@
           <p>关于我学习C++的一些心得体会与细节</p>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/">
+              <a class="btn" href="/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E4%B8%80)/">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -450,7 +450,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/02/26/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/MySQL%E8%AF%AD%E6%B3%95/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -464,7 +464,83 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/02/26/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+            <a href="/2021/03/11/MySQL%E8%AF%AD%E6%B3%95/" class="post-title-link" itemprop="url">MySQL语法</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-03-11 21:12:16 / 修改时间：22:22:11" itemprop="dateCreated datePublished" datetime="2021-03-11T21:12:16+08:00">2021-03-11</time>
+            </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="DQL-查询"><a href="#DQL-查询" class="headerlink" title="DQL(查询)"></a>DQL(查询)</h1><h2 id="常规查询"><a href="#常规查询" class="headerlink" title="常规查询"></a>常规查询</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line">-- 基本查询语句</span><br><span class="line">select 查询列表(*查询所有)</span><br><span class="line">from 表名</span><br><span class="line">where 判断条件</span><br><span class="line">group by 分组条件</span><br><span class="line">having 分组后筛选条件</span><br><span class="line">order by 排序条件 </span><br><span class="line">limit 【offset,】 size;</span><br><span class="line"></span><br><span class="line"># 执行顺序：</span><br><span class="line">from 子句</span><br><span class="line">where 子句</span><br><span class="line">group by 子句</span><br><span class="line">having 子句</span><br><span class="line">select 子句</span><br><span class="line">order by 子句</span><br><span class="line">limit子句</span><br><span class="line"></span><br><span class="line">-- -------------------------------------------------</span><br><span class="line"># where：</span><br><span class="line">&#x2F;*</span><br><span class="line">关系表达式筛选：&gt; &lt; &gt;&#x3D; &lt;&#x3D; &#x3D; &lt;&gt;</span><br><span class="line">	补充：支持!&#x3D;，不推荐</span><br><span class="line">逻辑表达式筛选：and or not</span><br><span class="line">	补充：支持&amp;&amp; || !，不推荐</span><br><span class="line">模糊查询筛选：(not) like &#x2F;(not) in &#x2F;between and &#x2F;is (not) null</span><br><span class="line">	like: _ 任意单个字符，%任意多个字符</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">-- -------------------------------------------------</span><br><span class="line"># order by：</span><br><span class="line">&#x2F;*</span><br><span class="line">asc 升序默认</span><br><span class="line">desc 降序</span><br><span class="line">特点：可以使用别名、多个字段、列数等进行排序</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">-- -------------------------------------------------</span><br><span class="line"># group by&#x2F;having&#x2F;分组函数</span><br><span class="line">&#x2F;* </span><br><span class="line">特点：</span><br><span class="line">	三个通常搭配使用</span><br><span class="line">	查询的字段往往是分组的字段</span><br><span class="line">*&#x2F;</span><br><span class="line">-- -------------------------------------------------</span><br><span class="line"># limit</span><br><span class="line">&#x2F;*</span><br><span class="line">offset要显示条目的起始索引(起始素引从0开始)</span><br><span class="line">size要显示的条目个数</span><br><span class="line">特点：</span><br><span class="line">	1.1imit语句放在查询语句的最后</span><br><span class="line">	2.公式：</span><br><span class="line">	如果：要显示的页数page,每页的条目数size。则</span><br><span class="line">	se1ect查询列表</span><br><span class="line">	from表</span><br><span class="line">	limit (page-1)*size, size;</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line">-- 起别名</span><br><span class="line">select 字段 as &#39;别名&#39;</span><br><span class="line">select 字段 &#39;别名&#39;</span><br><span class="line">select user() as &#39;别名&#39;</span><br><span class="line">select user() &#39;别名&#39;</span><br><span class="line"></span><br><span class="line">-- 注意运算符：</span><br><span class="line">&#x2F;*</span><br><span class="line">java的加号：加法运算&#x2F;拼接</span><br><span class="line">mysql的加号：加法运算</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h2 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h2><h3 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">&#x2F;*</span><br><span class="line">含义:又称多表查询,当查询的字段来自于多个表时,就会用到连接查询</span><br><span class="line">笛卡尔乘积现象:表1有m行,表2有n行。结果 &#x3D; m*n行</span><br><span class="line"></span><br><span class="line">发生原因:没有有效的连接条件</span><br><span class="line">如何避免:添加有效的连接条件</span><br><span class="line"></span><br><span class="line">按年代分类:</span><br><span class="line">	sql92标准:仅仅支持内连接</span><br><span class="line">	sgl99标准【推荐】:支持内连接和外连接(左外和右外)+交叉连接</span><br><span class="line">	</span><br><span class="line">按功能分类:</span><br><span class="line">	内连接:</span><br><span class="line">		等值连接</span><br><span class="line">		非等值连接</span><br><span class="line">		自连接</span><br><span class="line">	外连接:</span><br><span class="line">		左外连接</span><br><span class="line">		右外连接</span><br><span class="line">		全外连接</span><br><span class="line">	交叉连接</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="92"><a href="#92" class="headerlink" title="92"></a>92</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">#-----------------92----------92--------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">语法：</span><br><span class="line">select 查询列表</span><br><span class="line">from 表1 别名,表2 别名</span><br><span class="line">where 表1.key&#x3D;表2.key</span><br><span class="line">【and筛选条件】</span><br><span class="line">【group by分组字段】</span><br><span class="line">【having分组后的筛选】</span><br><span class="line">【order by排序字段】;</span><br><span class="line">	</span><br><span class="line">特点: where等值连接的连接条件</span><br><span class="line">	1、为了解决多表中的字段名重名问题,往往为表起别名,提高语义性</span><br><span class="line">	2、表的顺序无要求</span><br><span class="line">	3、多表等值连接的结果为多表的交集部分</span><br><span class="line">	4、n表连接,至少需要n-1个连接条件</span><br><span class="line">	5、一般需要为表起别名</span><br><span class="line">		可以搭配前面介绍的所有子句使用,比如排序、分组、筛选</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+
+<h3 id="99"><a href="#99" class="headerlink" title="99"></a>99</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">#--------------------------99-----------------------</span><br><span class="line">&#x2F;*</span><br><span class="line">语法</span><br><span class="line">	select查询列表</span><br><span class="line">	from 表1 别名</span><br><span class="line">	【连接类型(inner&#x2F;left&#x2F;right)】 join 表2 别名</span><br><span class="line">	on连接条件</span><br><span class="line">	【 where筛选条件】</span><br><span class="line">	【 group by分组】</span><br><span class="line">	【 having筛选条件】</span><br><span class="line">	【 order by排序列表】</span><br><span class="line">	【limit 索引】;</span><br><span class="line">	分类:</span><br><span class="line">	内连接: Inner</span><br><span class="line">	外连接</span><br><span class="line">		左外:1eft【outer】</span><br><span class="line">		右外: right【outer】</span><br><span class="line">		全外:fu11【outer】</span><br><span class="line">	交叉连接: cross</span><br><span class="line">*&#x2F;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#x2F;*</span><br><span class="line">内连接特点:</span><br><span class="line">	添加排序、分组、筛选</span><br><span class="line">	inner可以省路</span><br><span class="line">	筛选条件放在 where后画,连接条件放在on后面,提高分高性,便于阅读</span><br><span class="line">	inner join连接和sql92语法中的等值连接效果是一样的,都是查询多表交集</span><br><span class="line">外连接特点：</span><br><span class="line">	应用场景:用于查询一个表中有,另一个表没有的记录</span><br><span class="line">	</span><br><span class="line">1.外连接的查询结果为主表中的所有记录</span><br><span class="line">	如果从表中有和它匹配的,则显示匹配的值</span><br><span class="line">	如果从表中没有和它匹配的,则显示nu11</span><br><span class="line">	外连接查询结果&#x3D;内连接结果+主表中有而从表没有的记录</span><br><span class="line">2.左外连接,1eft join左边的是主表</span><br><span class="line">	右外连接,right join右边的是主表</span><br><span class="line">3.左外和右外交换两个表的顺序,可以实现同样的效果</span><br><span class="line">4.全外连接&#x3D;内连接的结果+表1中有但表2没有的+表2中有但表1没有的</span><br><span class="line">*&#x2F;</span><br></pre></td></tr></table></figure>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/11/MySQL%E8%AF%AD%E6%B3%95/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E7%BB%A7%E6%89%BF/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E7%BB%A7%E6%89%BF/" class="post-title-link" itemprop="url">未命名</a>
         </h2>
 
         <div class="post-meta">
@@ -475,14 +551,14 @@
               </span>
               <span class="post-meta-item-text">发表于</span>
 
-              <time title="创建时间：2021-02-26 00:17:52" itemprop="dateCreated datePublished" datetime="2021-02-26T00:17:52+08:00">2021-02-26</time>
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
             </span>
               <span class="post-meta-item">
                 <span class="post-meta-item-icon">
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-02-28 13:24:59" itemprop="dateModified" datetime="2021-02-28T13:24:59+08:00">2021-02-28</time>
+                <time title="修改时间：2020-07-31 23:40:42" itemprop="dateModified" datetime="2020-07-31T23:40:42+08:00">2020-07-31</time>
               </span>
 
           
@@ -498,10 +574,421 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>hexo自带的文件</p>
+          <h1 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h1><h2 id="格式："><a href="#格式：" class="headerlink" title="格式："></a>格式：</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 父类名称 </span>&#123;</span><br><span class="line">    <span class="comment">//……</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> 子类名称 <span class="keyword">extends</span> 父类名称 </span>&#123;</span><br><span class="line">    <span class="comment">//……</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">注意：</span></span><br><span class="line"><span class="comment">在父子类的继承关系中，如果成员变量重名，则创建子类对象时的访问方法：</span></span><br><span class="line"><span class="comment">直通过子类对象访问成员变量：等号左边是谁就优先使用谁，没有则向上找；</span></span><br><span class="line"><span class="comment">间接通过成员方法访问成员变量：该方法属于谁，就优先使用谁，没有则向上找；</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">同名变量的访问：</span></span><br><span class="line"><span class="comment">局部变量：			直接写成员变量名</span></span><br><span class="line"><span class="comment">本类的成员变量：		this.成员变量名</span></span><br><span class="line"><span class="comment">父类的成员变量：		super.成员变量名</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">在父子类中的继承关系中，创建子类对象，访问成员方法的规则：</span></span><br><span class="line"><span class="comment">	创建的对象是谁，就优先用谁，如果没有则向上找。</span></span><br><span class="line"><span class="comment">注意事项：</span></span><br><span class="line"><span class="comment">无论成员方法还是成员变量，如果没有都是向上找父类，绝对不会向下找子类的。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">重写(Override):方法名称一样，参数【列表一样】。覆盖、覆写</span></span><br><span class="line"><span class="comment">重载(Overlood):方法名称一样，参数【列表不一样】。</span></span><br><span class="line"><span class="comment">方法重写的特点：创建的是子类对象，则优先用子类方法</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">方法覆盖重写注意事项：</span></span><br><span class="line"><span class="comment">1.必须保证父子类之间方法的名称相同，参数相同。</span></span><br><span class="line"><span class="comment">@Override：写在前面，用来检测是不是有效的覆盖重写。不写如果要求满足也是正确的。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">2.子类方法的返回值必须【小于等于】父类方法的返回值范围。</span></span><br><span class="line"><span class="comment">扩展提示：java.lang.Object类是所有类的公共最高父类，java.lang.String是其子类</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">3.子类方法的权限必须【大于等于】父类方法的权限修饰符。</span></span><br><span class="line"><span class="comment">提示：public &gt; protevted &gt; (default) &gt; private</span></span><br><span class="line"><span class="comment">(default)不是关键字，而是什么都不写留空</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name;    <span class="comment">// 姓名</span></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> salary;  <span class="comment">// 工资</span></span><br><span class="line">    <span class="keyword">private</span> LocalDate hireDay;  <span class="comment">// 时间</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">()</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Employee</span><span class="params">(String n, <span class="keyword">double</span> s, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span> </span>&#123;</span><br><span class="line">        name = n;</span><br><span class="line">        salary = s;</span><br><span class="line">        hireDay = LocalDate.of(year, month, day);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> salary;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> LocalDate <span class="title">getHireDay</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> hireDay;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">raiseSalary</span><span class="params">(<span class="keyword">double</span> byPercent)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">double</span> raise = salary * byPercent / <span class="number">100</span>;</span><br><span class="line">        salary += raise;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Manager</span> <span class="keyword">extends</span> <span class="title">Employee</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> bonus;      <span class="comment">//奖金</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Manager</span><span class="params">(String name, <span class="keyword">double</span> salary, <span class="keyword">int</span> year, <span class="keyword">int</span> month, <span class="keyword">int</span> day)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(name, salary, year, month,day);<span class="comment">//（2）</span></span><br><span class="line">        bonus = <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setBonus</span><span class="params">(<span class="keyword">double</span> bonus)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">        <span class="keyword">this</span>.bonus = bonus;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">double</span> <span class="title">getSalary</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">super</span>.getSalary() +bonus;<span class="comment">//（1）</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//（1）super.getSalary()调用超类中的getSalary函数</span></span><br><span class="line"><span class="comment">//（2）super(name, salary, year, month,day);调用超类Employee中的构造器</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//注意：</span></span><br><span class="line"><span class="comment">//如果子类构造器没有显示的调用超类的构造器，将自动调用超类的无参构造器。如果超类没有无参构造器并且子类的构造器有没有显示的调用超类的构造器则报错</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Manager boss = <span class="keyword">new</span> Manager(<span class="string">&quot;Carl Carcker&quot;</span>,<span class="number">80000</span>,<span class="number">1981</span>,<span class="number">12</span>,<span class="number">15</span>);</span><br><span class="line">    boss.setBonus(<span class="number">5000</span>);</span><br><span class="line">    Employee[] staff = <span class="keyword">new</span> Employee[<span class="number">3</span>];</span><br><span class="line"></span><br><span class="line">    staff[<span class="number">0</span>] = boss;</span><br><span class="line">    staff[<span class="number">1</span>] = <span class="keyword">new</span> Employee(<span class="string">&quot;a&quot;</span>, <span class="number">50000</span>,<span class="number">1989</span>,<span class="number">10</span>,<span class="number">1</span>);</span><br><span class="line">    staff[<span class="number">2</span>] = <span class="keyword">new</span> Employee(<span class="string">&quot;b&quot;</span>, <span class="number">40000</span>,<span class="number">1990</span>,<span class="number">3</span>,<span class="number">15</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(Employee e : staff) &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;name= &quot;</span> + e.getName() + <span class="string">&quot;,salary= &quot;</span> + e.getSalary());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//可以将子类对象赋值给超类变量</span></span><br><span class="line"><span class="comment">//staff[0]看成是Employee对象，所以</span></span><br><span class="line"><span class="comment">//boss.setBonus(5000);		//OK</span></span><br><span class="line"><span class="comment">//staff[0].setBonus(5000);	//NO</span></span><br></pre></td></tr></table></figure>
           <!--noindex-->
             <div class="post-button">
-              <a class="btn" href="/2021/02/26/hello-world/">
+              <a class="btn" href="/2021/03/11/%E7%BB%A7%E6%89%BF/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E9%9B%86%E5%90%88/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E9%9B%86%E5%90%88/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 23:40:42" itemprop="dateModified" datetime="2020-07-31T23:40:42+08:00">2020-07-31</time>
+              </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="Collection-lt-E-gt-接口"><a href="#Collection-lt-E-gt-接口" class="headerlink" title="Collection&lt; E &gt;(接口)"></a>Collection&lt; E &gt;(接口)</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//单列集合的祖宗类</span></span><br><span class="line"><span class="keyword">import</span> java.util.*; <span class="comment">// 导包格式</span></span><br><span class="line"><span class="comment">// 方法</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">add</span><span class="params">(E e)</span></span>; <span class="comment">// 添加集合</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">addAll</span><span class="params">(Collection&lt;? extends E&gt; c)</span>  <span class="comment">// 吧给定集合和原集合拼接在一起</span></span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">clear</span><span class="params">()</span></span>; <span class="comment">// 清空集合所有元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">remove</span><span class="params">(E e)</span></span>; <span class="comment">// 把给定元素在当前集合删除并返回被删除的元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">contains</span><span class="params">(Objeck obj)</span></span>; <span class="comment">// 判断集合中是否有给定元素</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isEmpty</span><span class="params">()</span></span>; <span class="comment">// 判断当前集合是否为空</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">size</span><span class="params">()</span></span>; <span class="comment">// 返回集合中元素的个数</span></span><br><span class="line"><span class="keyword">public</span> Object[] toArray(); <span class="comment">// 把集合的元素存储到数组中</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 无序、无重复、无索引</span></span><br><span class="line">    Collection&lt;String&gt; Sets = <span class="keyword">new</span> HashSet&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 添加元素</span></span><br><span class="line">    Sets.add(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    Sets.add(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    Sets.add(<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">    Sets.add(<span class="string">&quot;王五&quot;</span>);</span><br><span class="line">    System.out.println(Sets);</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 判断元素是否为空</span></span><br><span class="line">    System.out.println(Sets.isEmpty()); <span class="comment">// 非空</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// 删除元素，</span></span><br><span class="line">    <span class="comment">// 如果是List系列集合删除重复元素的时候默认删除第一个</span></span><br><span class="line">    System.out.println(Sets.remove(<span class="string">&quot;张三&quot;</span>));</span><br><span class="line">    System.out.println(Sets);</span><br><span class="line"></span><br><span class="line">    <span class="comment">//Sets.clear(); // 清空集合</span></span><br><span class="line">    <span class="comment">//System.out.println(Sets);</span></span><br><span class="line"></span><br><span class="line">    System.out.println(Sets.size()); <span class="comment">// 获取集合的大小</span></span><br><span class="line">    <span class="comment">// 判断是否有这个元素</span></span><br><span class="line">    System.out.println(Sets.contains(<span class="string">&quot;张三&quot;</span>));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 把集合转换为数组</span></span><br><span class="line">    Object[] obj = Sets.toArray();</span><br><span class="line">    <span class="comment">// 吧Object数组转换为String数组</span></span><br><span class="line">    <span class="comment">//String[] str = Sets.toArray(String[]::new); </span></span><br><span class="line">    System.out.println(Arrays.toString(obj));</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 集合并集</span></span><br><span class="line">    Collection&lt;String&gt; arr1 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    arr1.add(<span class="string">&quot;zs&quot;</span>);</span><br><span class="line">    arr1.add(<span class="string">&quot;ls&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Collection&lt;String&gt;arr2 = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    arr2.add(<span class="string">&quot;ww&quot;</span>);</span><br><span class="line">    System.out.println(arr1.addAll(arr2)); <span class="comment">// 拼接</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="Collection遍历方式"><a href="#Collection遍历方式" class="headerlink" title="Collection遍历方式"></a>Collection遍历方式</h2><h3 id="迭代器"><a href="#迭代器" class="headerlink" title="迭代器"></a>迭代器</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> java.util.Iterator; <span class="comment">// 迭代器导包格式</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Iterator <span class="title">iterator</span><span class="params">()</span></span>; <span class="comment">// 获取迭代器</span></span><br><span class="line">E.next(); <span class="comment">// 获取下一个元素值</span></span><br><span class="line"><span class="function"><span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span></span>; <span class="comment">// 判断是否有下一个元素有返回true，反之。</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Collection&lt;String&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    list.add(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;王五&quot;</span>);</span><br><span class="line">    list.add(<span class="string">&quot;赵六&quot;</span>);</span><br><span class="line"></span><br><span class="line">    Iterator&lt;String&gt; it = list.iterator(); <span class="comment">// 创建迭代器</span></span><br><span class="line">    <span class="keyword">while</span> (it.hasNext()<span class="comment">/*判断是否有下一个元素*/</span>) &#123;</span><br><span class="line">        String ele = it.next(); <span class="comment">// 获取下一个的元素</span></span><br><span class="line">        System.out.println(ele);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="for-eash"><a href="#for-eash" class="headerlink" title="for eash"></a>for eash</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">格式：</span></span><br><span class="line"><span class="comment">for (访问或遍历对象的类型 变量名 : 被遍历数组或集合) &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">缺点：无法知道到底遍历到哪个元素了即没有索引。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Collection&lt;String&gt; lists = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">    lists.add(<span class="string">&quot;张三&quot;</span>);</span><br><span class="line">    lists.add(<span class="string">&quot;李四&quot;</span>);</span><br><span class="line">    lists.add(<span class="string">&quot;王五&quot;</span>);</span><br><span class="line">    lists.add(<span class="string">&quot;赵六&quot;</span>);</span><br><span class="line">    System.out.println(lists);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(String list : lists) &#123;</span><br><span class="line">        System.out.println(list);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Lambda表达式"><a href="#Lambda表达式" class="headerlink" title="Lambda表达式"></a>Lambda表达式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// jdk8以后的新技术</span></span><br><span class="line">lists.forEach(s-&gt;&#123;</span><br><span class="line">    System.out.println(s);</span><br><span class="line">&#125;);</span><br><span class="line"><span class="comment">// 优化形式</span></span><br><span class="line"><span class="comment">// lists.forEach(s-&gt;System.out.println(s)); </span></span><br><span class="line"><span class="comment">// lists.forEach(System.out::println);</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="List-lt-E-gt-接口"><a href="#List-lt-E-gt-接口" class="headerlink" title="List&lt; E &gt;(接口)"></a>List&lt; E &gt;(接口)</h2>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/11/%E9%9B%86%E5%90%88/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E6%B3%9B%E5%9E%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E6%B3%9B%E5%9E%8B/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 23:40:42" itemprop="dateModified" datetime="2020-07-31T23:40:42+08:00">2020-07-31</time>
+              </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="泛型"><a href="#泛型" class="headerlink" title="泛型"></a>泛型</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">好处：泛型可以在编译阶段约束只能操作某种数据类型</span></span><br><span class="line"><span class="comment">注意：泛型和集合都只能支持引用数据类型，不支持基本数据类型</span></span><br><span class="line"><span class="comment">泛型变量里面建议使用“E,T,K,V”</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">自定义泛型类：</span></span><br><span class="line"><span class="comment">修饰符 class 类名&lt;泛型变量&gt; &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">自定义泛型方法格式：</span></span><br><span class="line"><span class="comment">修饰符 &lt;泛型变量&gt; 返回值类型 方法名称(参数列表) &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">自定义泛型接口</span></span><br><span class="line"><span class="comment">修饰符 interface 类名&lt;泛型变量&gt; &#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">通配符：?</span></span><br><span class="line"><span class="comment">?可以在使用的时候代表一切数据类型型(E,T,K,V表示创建泛型的时候表示一切数据类型)</span></span><br><span class="line"><span class="comment">通配符的上下限：</span></span><br><span class="line"><span class="comment">? extends 父类 那么?必须是父类或其子类。(泛型的上限)</span></span><br><span class="line"><span class="comment">? super 子类 那么?必须是子类或其父类。(泛型的下限，不常见)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/11/%E6%B3%9B%E5%9E%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E5%8F%8D%E5%B0%84/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E5%8F%8D%E5%B0%84/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 23:40:41" itemprop="dateModified" datetime="2020-07-31T23:40:41+08:00">2020-07-31</time>
+              </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 23:40:42" itemprop="dateModified" datetime="2020-07-31T23:40:42+08:00">2020-07-31</time>
+              </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="进程"><a href="#进程" class="headerlink" title="进程"></a>进程</h1><p>程序是静止的，运行中的程序就是进程。</p>
+<p>进程的三个特性：</p>
+<p>1.动态性：进程是运行中的程序，要动态的占用内存，CPU和网络等资源</p>
+<p>2.独立性：进程与进程之间是相互独立的，彼此有自己的独立内存区域。</p>
+<p>3.并发性：假如CPU是单核，同一个时刻其实内存中有一个进程在被执行。CPU会分时轮询切换依次为每个进程服务，因为切换的速度非常块，给我们的感觉这些进程在同时执行，这就是并发。</p>
+<p>并行：同一时刻同时有多个在执行</p>
+<h1 id="线程"><a href="#线程" class="headerlink" title="线程"></a>线程</h1><p>线程属于进程，一个进程可以包含多个线程，这就是多线程。</p>
+<p>线程创建开销相对于进程来说比较小</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/%E6%96%AD%E8%A8%80&%E6%97%A5%E5%BF%97/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/03/11/%E6%96%AD%E8%A8%80&%E6%97%A5%E5%BF%97/" class="post-title-link" itemprop="url">未命名</a>
+        </h2>
+
+        <div class="post-meta">
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:16" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:16+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-07-31 23:40:45" itemprop="dateModified" datetime="2020-07-31T23:40:45+08:00">2020-07-31</time>
+              </span>
+
+          
+<p></p>
+
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="断言"><a href="#断言" class="headerlink" title="断言"></a>断言</h1><p>断言（Assertion）是一种调试程序的方式。在Java中，使用<code>assert</code>关键字来实现断言。Java断言的特点是：断言失败时会抛出<code>AssertionError</code>，导致程序结束退出。因此，断言不能用于可恢复的程序错误，<strong>只应该用于开发和测试阶段</strong>。对于可恢复的程序错误，不应该使用断言。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">double</span> x = Math.abs(-<span class="number">123.45</span>);</span><br><span class="line">    <span class="keyword">assert</span> x &gt;= <span class="number">0</span> : <span class="string">&quot;x must &gt;= 0&quot;</span>;</span><br><span class="line">    System.out.println(x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>assert x &gt;= 0 : &quot;x must &gt;= 0&quot;;</code>这句语句便是断言，断言条件<code>x &gt;= 0</code>预期为<code>true</code>。如果计算结果为<code>false</code>，则断言失败，抛出<code>AssertionError</code>。语句<code>&quot;x must &gt;= 0&quot;</code>时断言信息，就是说在断言失败的时候会带上消息<code>&quot;x must &gt;= 0&quot;</code>方便调试。</p>
+<p>这是因为JVM默认关闭断言指令，即遇到<code>assert</code>语句就自动忽略了，不执行。</p>
+<p>要执行<code>assert</code>语句，必须给Java虚拟机传递<code>-enableassertions</code>（可简写为<code>-ea</code>）参数启用断言。所以，上述程序必须在命令行下运行才有效果：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ java -ea Main.java</span><br><span class="line">Exception in thread <span class="string">&quot;main&quot;</span> java.lang.AssertionError</span><br><span class="line">	at Main.main(Main.java:<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<p>还可以有选择地对特定地类启用断言，命令行参数是：<code>-ea:com.itranswarp.sample.Main</code>，表示只对<code>com.itranswarp.sample.Main</code>这个类启用断言。</p>
+<p>或者对特定地包启用断言，命令行参数是：<code>-ea:com.itranswarp.sample...</code>（注意结尾有3个<code>.</code>），表示对<code>com.itranswarp.sample</code>这个包启动断言。</p>
+<p>实际开发中，很少使用断言。更好的方法是编写单元测试，即<code>JUnit</code>的使用。</p>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/03/11/%E6%96%AD%E8%A8%80&%E6%97%A5%E5%BF%97/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
@@ -524,6 +1011,9 @@
 
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
 
 
 
@@ -590,7 +1080,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -672,7 +1162,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共9.6k字</span>
+  <span class="post-count">博客全站共70.3k字</span>
 </div>
 
 
