@@ -14,8 +14,8 @@
     
     <item>
       <title>Java-eclipse安装</title>
-      <link>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/</link>
-      <guid>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/</guid>
+      <link>http://raint9.tk/2021/03/12/Java/Java-eclipse%E5%AE%89%E8%A3%85/</link>
+      <guid>http://raint9.tk/2021/03/12/Java/Java-eclipse%E5%AE%89%E8%A3%85/</guid>
       <pubDate>Thu, 11 Mar 2021 16:58:10 GMT</pubDate>
       
       <description>一篇关于下载并安装Java开源IDE软件eclipse的教程</description>
@@ -31,14 +31,14 @@
       <category domain="http://raint9.tk/tags/Raint/">Raint</category>
       
       
-      <comments>http://raint9.tk/2021/03/12/Java-eclipse%E5%AE%89%E8%A3%85/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/12/Java/Java-eclipse%E5%AE%89%E8%A3%85/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>Java环境配置</title>
-      <link>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
-      <guid>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
+      <link>http://raint9.tk/2021/03/12/Java/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</link>
+      <guid>http://raint9.tk/2021/03/12/Java/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/</guid>
       <pubDate>Thu, 11 Mar 2021 16:58:10 GMT</pubDate>
       
       <description>一篇基于jdk1.8来配置java开发环境的教程</description>
@@ -54,7 +54,7 @@
       <category domain="http://raint9.tk/tags/Raint/">Raint</category>
       
       
-      <comments>http://raint9.tk/2021/03/12/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/12/Java/Java%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/#disqus_thread</comments>
       
     </item>
     
@@ -83,8 +83,8 @@
     
     <item>
       <title>继承</title>
-      <link>http://raint9.tk/2021/03/11/%E7%BB%A7%E6%89%BF/</link>
-      <guid>http://raint9.tk/2021/03/11/%E7%BB%A7%E6%89%BF/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E7%BB%A7%E6%89%BF/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E7%BB%A7%E6%89%BF/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java的继承篇的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -100,14 +100,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E7%BB%A7%E6%89%BF/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E7%BB%A7%E6%89%BF/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>集合</title>
-      <link>http://raint9.tk/2021/03/11/%E9%9B%86%E5%90%88/</link>
-      <guid>http://raint9.tk/2021/03/11/%E9%9B%86%E5%90%88/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E9%9B%86%E5%90%88/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E9%9B%86%E5%90%88/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java的集合篇的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -123,14 +123,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E9%9B%86%E5%90%88/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E9%9B%86%E5%90%88/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>泛型</title>
-      <link>http://raint9.tk/2021/03/11/%E6%B3%9B%E5%9E%8B/</link>
-      <guid>http://raint9.tk/2021/03/11/%E6%B3%9B%E5%9E%8B/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E6%B3%9B%E5%9E%8B/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E6%B3%9B%E5%9E%8B/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java的f泛型的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -146,14 +146,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E6%B3%9B%E5%9E%8B/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E6%B3%9B%E5%9E%8B/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>多线程</title>
-      <link>http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
-      <guid>http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java多线程的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -169,14 +169,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E5%A4%9A%E7%BA%BF%E7%A8%8B/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E5%A4%9A%E7%BA%BF%E7%A8%8B/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>断言&amp;日志</title>
-      <link>http://raint9.tk/2021/03/11/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/</link>
-      <guid>http://raint9.tk/2021/03/11/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java的断言日志的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -192,14 +192,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E6%96%AD%E8%A8%80&amp;%E6%97%A5%E5%BF%97/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>单例模式</title>
-      <link>http://raint9.tk/2021/03/11/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
-      <guid>http://raint9.tk/2021/03/11/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java单例模式的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -215,14 +215,14 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/#disqus_thread</comments>
       
     </item>
     
     <item>
       <title>错误</title>
-      <link>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/</link>
-      <guid>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/</guid>
+      <link>http://raint9.tk/2021/03/11/Java/%E9%94%99%E8%AF%AF/</link>
+      <guid>http://raint9.tk/2021/03/11/Java/%E9%94%99%E8%AF%AF/</guid>
       <pubDate>Thu, 11 Mar 2021 13:08:16 GMT</pubDate>
       
       <description>这是一篇关于Java错误篇的笔记，感谢好友菊丸栗子提供的帮助</description>
@@ -238,7 +238,7 @@
       <category domain="http://raint9.tk/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/">菊丸栗子</category>
       
       
-      <comments>http://raint9.tk/2021/03/11/%E9%94%99%E8%AF%AF/#disqus_thread</comments>
+      <comments>http://raint9.tk/2021/03/11/Java/%E9%94%99%E8%AF%AF/#disqus_thread</comments>
       
     </item>
     

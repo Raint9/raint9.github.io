@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"raint9.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助">
+<meta property="og:type" content="article">
+<meta property="og:title" content="异常">
+<meta property="og:url" content="http://raint9.tk/2021/03/11/Java/%E5%BC%82%E5%B8%B8/index.html">
+<meta property="og:site_name" content="荒古遗迹">
+<meta property="og:description" content="这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-03-11T13:08:15.997Z">
+<meta property="article:modified_time" content="2021-03-11T16:54:58.482Z">
+<meta property="article:author" content="Raint">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="菊丸栗子">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="http://raint9.tk/2021/03/11/Java/%E5%BC%82%E5%B8%B8/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>异常 | 荒古遗迹</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<link rel="alternate" href="/rss2.xml" title="荒古遗迹" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+
+<a target="_blank" rel="noopener" href="https://github.com/raint9" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">荒古遗迹</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-resources">
+
+    <a href="/resources" rel="section"><i class="fa fa-download fa-fw"></i>资源</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/03/11/Java/%E5%BC%82%E5%B8%B8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          异常
+        </h1>
+
+        <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2021-03-11 21:08:15" itemprop="dateCreated datePublished" datetime="2021-03-11T21:08:15+08:00">2021-03-11</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2021-03-12 00:54:58" itemprop="dateModified" datetime="2021-03-12T00:54:58+08:00">2021-03-12</time>
+              </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+<p></p>
+
+  <div class="out-img-topic">
+    <img src=/summary_images/lux.jpg class="image-size-400">
+  </div>
+
+            <div class="post-description">这是一篇关于Java的异常篇的笔记，感谢好友菊丸栗子提供的帮助</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="Error和Exception"><a href="#Error和Exception" class="headerlink" title="Error和Exception"></a>Error和Exception</h1><p>Error:严重错误，无法通过处理的错误，一旦出现程序员无能为力，只能重启系统，优化项目。</p>
+<p>比如内存崩溃，jvm本身的崩溃。</p>
+<p>Exception：异常类，开发中代码在编译或者执行的过程中可能出现的错误，它需要提前处理，以便程序更健壮！</p>
+<p><code>Exception</code>又分为两大类：</p>
+<ol>
+<li><code>RuntimeException</code>以及它的子类；</li>
+<li>非<code>RuntimeException</code>（包括<code>IOException</code>、<code>ReflectiveOperationException</code>等等）</li>
+</ol>
+<p>Java规定：</p>
+<ul>
+<li>必须捕获的异常，包括<code>Exception</code>及其子类，但不包括<code>RuntimeException</code>及其子类，这种类型的异常称为Checked Exception。</li>
+<li>不需要捕获的异常，包括<code>Error</code>及其子类，<code>RuntimeException</code>及其子类。</li>
+</ul>
+<h1 id="编译时异常"><a href="#编译时异常" class="headerlink" title="编译时异常"></a>编译时异常</h1><p>继承Excption的异常或其子类，编译阶段就会报错，必须程序员处理，否则代码编译不通过！！！</p>
+<h2 id="方式一"><a href="#方式一" class="headerlink" title="方式一"></a>方式一</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">抛出格式：</span></span><br><span class="line"><span class="comment">方法 throws 异常1,异常2,……&#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">建议抛出异常的方式：代表一切异常</span></span><br><span class="line"><span class="comment">方法 throws Exception&#123;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">出现编译时异常的地方层层把异常抛出去给调用者，调用者最终抛出给虚拟机，JVM虚拟机输出异常信息，直接干掉程序，这种方式与默认方式是一样的。</span></span><br><span class="line"><span class="comment">虽然可以解决代码编译时的错误，但是一旦运行时真的出现异常，程序还是会立即死亡，这种方法并不好！</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line">    String date = <span class="string">&quot;2019-10-11&quot;</span>;</span><br><span class="line">    parseDate(date);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parseDate</span><span class="params">(String date)</span> <span class="keyword">throws</span> ParseException </span>&#123;</span><br><span class="line">    SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>);</span><br><span class="line">    Date time = sdf.parse(date);</span><br><span class="line">    System.out.println(time);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方式二"><a href="#方式二" class="headerlink" title="方式二"></a>方式二</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">格式：</span></span><br><span class="line"><span class="comment">try &#123;</span></span><br><span class="line"><span class="comment">	// 监视可能出现异常的代码！</span></span><br><span class="line"><span class="comment">&#125;catch (异常类型1 变量) &#123;</span></span><br><span class="line"><span class="comment">	// 处理异常</span></span><br><span class="line"><span class="comment">&#125;catch (异常类型2 变量) &#123;</span></span><br><span class="line"><span class="comment">	// 处理异常</span></span><br><span class="line"><span class="comment">&#125;……</span></span><br><span class="line"><span class="comment">企业级用法</span></span><br><span class="line"><span class="comment">try &#123;</span></span><br><span class="line"><span class="comment">	// 监视可能出现的代码！</span></span><br><span class="line"><span class="comment">&#125; catch (Exception e) &#123;</span></span><br><span class="line"><span class="comment">	e.printStackTrace(); // 直接打印异常栈信息</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">第二种调用方式可以处理异常，并且出现异常后代码也不会死亡。但是从理论上来说，这种方式不是最好的，上层调用者不能直接知道底层的执行情况！</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;程序开始&quot;</span>);</span><br><span class="line">    String date = <span class="string">&quot;2019-10-11&quot;</span>;</span><br><span class="line">    parseDate(date);</span><br><span class="line">    System.out.println(<span class="string">&quot;程序结束&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parseDate</span><span class="params">(String date)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>);</span><br><span class="line">        Date time = sdf.parse(date);</span><br><span class="line">        System.out.println(time);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (ParseException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="方式三"><a href="#方式三" class="headerlink" title="方式三"></a>方式三</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">在出现异常的地方把异常一层层的抛出给最外层调用者，最外层调用者集中捕获处理！！(规范做法)</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">编译时异常的处理方式三：底层出现的异常抛出给最外层调用者集中捕获处理。这种方案最外层调用者可以知道底层执行的情况，同时程序在出现异常后也不会立即死亡，理论上最好的方案。</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    String date = <span class="string">&quot;2019-10-11&quot;</span>;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        parseDate(date);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">parseDate</span><span class="params">(String date)</span><span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">    SimpleDateFormat sdf = <span class="keyword">new</span> SimpleDateFormat(<span class="string">&quot;yyyy-MM-dd&quot;</span>);</span><br><span class="line">    Date time = sdf.parse(date);</span><br><span class="line">    System.out.println(time);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="运行时异常"><a href="#运行时异常" class="headerlink" title="运行时异常"></a>运行时异常</h1><p>继承RuntimeException的异常或子类，编译阶段时不会出错的，它是在运行阶段才可能出现，建议提前处理</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line"> 	<span class="comment">// 1.数组索引越界异：ArrayIndexOutOfBoundsException</span></span><br><span class="line">	<span class="keyword">int</span>[] arrs = &#123;<span class="number">10</span>,<span class="number">20</span>&#125;;</span><br><span class="line">	<span class="comment">//System.out.println(arrs[3]); // 索引越界，程序死亡</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 2.空指针异常：NullPointerException,输出没有问题。但是调用空指针变量的功能就会报错</span></span><br><span class="line">    String name = <span class="keyword">null</span>;</span><br><span class="line">    System.out.println(name); <span class="comment">// 正常执行</span></span><br><span class="line">    <span class="comment">//System.out.println(name.length); // 空指针异常，程序死亡</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 3.类型转换异常：ClassCastException</span></span><br><span class="line">    Object o = <span class="string">&quot;你好&quot;</span>;</span><br><span class="line">    Integer str = (Integer)o;</span><br><span class="line">    <span class="comment">//System.out.println(str); // 类型转换异常，程序死亡</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 4.迭代器遍历没有此元素异常：NoSuchElementException</span></span><br><span class="line">     List&lt;String&gt; lists = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line">     Iterator&lt;String&gt; it = lists.iterator();</span><br><span class="line">     <span class="comment">//String str = it.next(); // 没有元素异常，程序死亡</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 5.数字操作异常：ArithmeticException</span></span><br><span class="line">    <span class="comment">//int a = 10/0; // 操作异常</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 6.数字转换异常：NumberFormatException</span></span><br><span class="line">     String str = <span class="string">&quot;23a&quot;</span>;</span><br><span class="line">    <span class="comment">// Integer a = Integer.valueOf(str); // 数字转换异常，程序死亡</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">小结：</span></span><br><span class="line"><span class="comment">运行时异常编译阶段不报错，可以处理也可以不处理，建议处理！！</span></span><br><span class="line"><span class="comment">运行时异常可以自动抛出，不需要我们手动抛出。</span></span><br><span class="line"><span class="comment">运行时异常的处理规范：直接在最外层捕获处理即可，底层会自动抛出！！</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    System.out.println(<span class="string">&quot;程序开始&quot;</span>);</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        divide(<span class="number">10</span>,<span class="number">0</span>);</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">&quot;程序结束&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">divide</span><span class="params">(<span class="keyword">int</span> a, <span class="keyword">int</span> b)</span> </span>&#123;</span><br><span class="line">    System.out.println(a/b);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="抛出异常"><a href="#抛出异常" class="headerlink" title="抛出异常"></a>抛出异常</h1><p>抛出异常分为两步：</p>
+<ol>
+<li><p>创建某个<code>Exception</code>实例</p>
+</li>
+<li><p>用<code>throw</code>语句抛出</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//详细方法</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">process2</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        NullPointerException e = <span class="keyword">new</span> NullPointExction();</span><br><span class="line">        <span class="keyword">throw</span> e;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//简化方法（通常使用该方法把异常代码合并成一行）</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">processs2</span> <span class="params">(String s)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h1 id="异常转换问题"><a href="#异常转换问题" class="headerlink" title="异常转换问题"></a>异常转换问题</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*如果一个方法捕获某个异常，又在 catch 子句中抛出新的异常</span></span><br><span class="line"><span class="comment"> *就相当于把抛出的异常类型转换了</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123; </span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            process1();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">  &#125;</span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">process1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            process2();</span><br><span class="line">        &#125; <span class="keyword">catch</span>(NullPointException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">process2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">         <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*输出结果：</span></span><br><span class="line"><span class="comment">java.lang.IllegalArgumentException</span></span><br><span class="line"><span class="comment">at Main.process1(Main.java:15)</span></span><br><span class="line"><span class="comment">at Main.main(Main.java:5)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p>这说明新的异常丢失了原始异常信息，已经看不到原始异常<code>NullPointerException</code>的信息了。为了能追踪到完整的异常栈，在构造异常的时候，把原始的<code>Exception</code>实例传进去，新的<code>Exception</code>就可以持有原始<code>Exception</code>信息。对上述代码改进如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            process1();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">process1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            process2();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> IllegalArgumentException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">static</span> <span class="keyword">void</span> <span class="title">process2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> NullPointerException();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/*输出结果</span></span><br><span class="line"><span class="comment">java.lang.IllegalArgumentException: java.lang.NullPointerException</span></span><br><span class="line"><span class="comment">    at Main.process1(Main.java:15)</span></span><br><span class="line"><span class="comment">    at Main.main(Main.java:5)</span></span><br><span class="line"><span class="comment">Caused by: java.lang.NullPointerException</span></span><br><span class="line"><span class="comment">    at Main.process2(Main.java:20)</span></span><br><span class="line"><span class="comment">    at Main.process1(Main.java:13)</span></span><br><span class="line"><span class="comment">    </span></span><br><span class="line"><span class="comment">注意到Caused by: Xxx，说明捕获的IllegalArgumentException并不是造成问题的根源，根源在于NullPointerException，是在Main.process2()方法抛出的。</span></span><br><span class="line"><span class="comment">捕获到异常并再次抛出时，一定要留住原始异常，否则很难定位第一案发现场！</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h1 id="finally"><a href="#finally" class="headerlink" title="finally"></a>finally</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">finally的作用：可以在代码执行完毕后进行资源的释放操作。</span></span><br><span class="line"><span class="comment">资源：实现类Closeable接口的，自带close()关闭方法</span></span><br><span class="line"><span class="comment">格式：</span></span><br><span class="line"><span class="comment">try &#123;</span></span><br><span class="line"><span class="comment">	// 监视可能出现异常的代码！</span></span><br><span class="line"><span class="comment">&#125;catch (异常类型 变量) &#123;</span></span><br><span class="line"><span class="comment">	// 处理异常</span></span><br><span class="line"><span class="comment">&#125;finally  &#123;</span></span><br><span class="line"><span class="comment">	// 处理异常</span></span><br><span class="line"><span class="comment">&#125;</span></span><br><span class="line"><span class="comment">注意：可以在finally中写入return语句，但是这样会导致覆盖掉其他任何的return值，所以不建议在finally中使用return语句</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    divide1();</span><br><span class="line">    System.out.println(<span class="string">&quot;===============&quot;</span>);</span><br><span class="line">    divide2();</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">divide2</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">int</span> a =<span class="number">10</span>/<span class="number">2</span>;</span><br><span class="line">        System.out.println(a);</span><br><span class="line">        <span class="keyword">return</span> a;</span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;==========finally执行==========&quot;</span>);</span><br><span class="line">        <span class="comment">//return 0;</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">divide1</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        System.out.println(<span class="number">10</span>/<span class="number">2</span>);</span><br><span class="line"></span><br><span class="line">    &#125;<span class="keyword">catch</span> (Exception e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;<span class="keyword">finally</span> &#123;</span><br><span class="line">        System.out.println(<span class="string">&quot;==========finally执行==========&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h1 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">一、出现次数</span></span><br><span class="line"><span class="comment">try 0-1次</span></span><br><span class="line"><span class="comment">catch 0-n次(没有catch一定存在finally)</span></span><br><span class="line"><span class="comment">finally 0-1次</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">二、注意：</span></span><br><span class="line"><span class="comment">1.运行时异常背抛出可以不处理，可以自动抛出，编译时异常必须处理，按照规范都应该处理！</span></span><br><span class="line"><span class="comment">2.重新方法申明抛出的异常，应该与父类被重写方法申明抛出的异常一样或范围更小</span></span><br><span class="line"><span class="comment">3.方法默认都可以自动抛出运行时异常! throws RuntimeException可以省略不写！！</span></span><br><span class="line"><span class="comment">4.当多异常处理时，捕获处理，前边的异常类不能是后边异常类的父类。</span></span><br><span class="line"><span class="comment">5.在try/catch后可以追加finally代码块，其中的代码一定会被执行，通常用于资源回收操作。</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/*异常分类</span></span><br><span class="line"><span class="comment">Exception</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">├─ RuntimeException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  ├─ NullPointerException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  ├─ IndexOutOfBoundsException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  ├─ SecurityException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  └─ IllegalArgumentException</span></span><br><span class="line"><span class="comment">│     │</span></span><br><span class="line"><span class="comment">│     └─ NumberFormatException</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">├─ IOException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  ├─ UnsupportedCharsetException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  ├─ FileNotFoundException</span></span><br><span class="line"><span class="comment">│  │</span></span><br><span class="line"><span class="comment">│  └─ SocketException</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">├─ ParseException</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">├─ GeneralSecurityException</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">├─ SQLException</span></span><br><span class="line"><span class="comment">│</span></span><br><span class="line"><span class="comment">└─ TimeoutException</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="自定义异常"><a href="#自定义异常" class="headerlink" title="自定义异常"></a>自定义异常</h1><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">自定义编译时异常：</span></span><br><span class="line"><span class="comment">a.定义一个异常类继承Exception</span></span><br><span class="line"><span class="comment">b.重写构造器</span></span><br><span class="line"><span class="comment">c.在出现异常的地方用throw new 自定义对象抛出！</span></span><br><span class="line"><span class="comment">编译时异常时编译阶段就报错，提醒更加强裂，一定需要处理！！！</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">自定义运行时异常：</span></span><br><span class="line"><span class="comment">a.定义一个异常类继承RuntimeException</span></span><br><span class="line"><span class="comment">b.重写构造器</span></span><br><span class="line"><span class="comment">c.在出现异常的地方用throw new 自定义对象抛出</span></span><br><span class="line"><span class="comment">提醒不强烈，编译阶段不报错！！</span></span><br><span class="line"><span class="comment"></span></span><br><span class="line"><span class="comment">注意： </span></span><br><span class="line"><span class="comment">thorws:用在方法上用于抛出方法中的异常</span></span><br><span class="line"><span class="comment">throw:用在出现异常的地方，用于创建异常对象且立即从此处抛出！</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义编译时异常</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AgeIllegalException</span> <span class="keyword">extends</span> <span class="title">Exception</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalException</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalException</span><span class="params">(String message, Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message, cause);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalException</span><span class="params">(Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(cause);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalException</span><span class="params">(String message, Throwable cause, <span class="keyword">boolean</span> enableSuppression, <span class="keyword">boolean</span> writableStackTrace)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message, cause, enableSuppression, writableStackTrace);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 自定义运行时异常</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AgeIllegalRunTimeException</span> <span class="keyword">extends</span> <span class="title">RuntimeException</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalRunTimeException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalRunTimeException</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalRunTimeException</span><span class="params">(String message, Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message, cause);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalRunTimeException</span><span class="params">(Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(cause);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AgeIllegalRunTimeException</span><span class="params">(String message, Throwable cause, <span class="keyword">boolean</span> enableSuppression, <span class="keyword">boolean</span> writableStackTrace)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message, cause, enableSuppression, writableStackTrace);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 调用</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        checkAge(<span class="number">1000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (AgeIllegalException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">checkAge</span><span class="params">(<span class="keyword">int</span> age)</span> <span class="keyword">throws</span> AgeIllegalException </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (age &lt; <span class="number">0</span> || age &gt; <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="keyword">throw</span> <span class="keyword">new</span> AgeIllegalException(<span class="string">&quot;/ Incorrect age entered&quot;</span>);</span><br><span class="line">        <span class="comment">//throw new AgeIllegalRunTimeException(&quot;/ Incorrect age entered&quot;);</span></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>在一个大型项目中，可以自定义新的异常类型，但是，保持一个合理的异常继承体系是非常重要的。</p>
+<p>一个常见的做法是自定义一个<code>BaseException</code>作为“根异常”，然后，派生出各种业务类型的异常。</p>
+<p><code>BaseException</code>需要从一个适合的<code>Exception</code>派生，通常建议从<code>RuntimeException</code>派生：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseException</span> <span class="keyword">extends</span> <span class="title">RuntimeException</span> </span>&#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其他业务类型的异常就可以从<code>BaseException</code>派生：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserNotFoundException</span> <span class="keyword">extends</span> <span class="title">BaseException</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginFailedException</span> <span class="keyword">extends</span> <span class="title">BaseException</span> </span>&#123;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p>自定义的<code>BaseException</code>应该提供多个构造方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BaseException</span> <span class="keyword">extends</span> <span class="title">RuntimeException</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BaseException</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BaseException</span><span class="params">(String message, Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message, cause);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BaseException</span><span class="params">(String message)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(message);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BaseException</span><span class="params">(Throwable cause)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">super</span>(cause);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>上述构造方法实际上都是原样照抄<code>RuntimeException</code>。这样，抛出异常的时候，就可以选择合适的构造方法。通过IDE可以根据父类快速生成子类的构造方法。</p>
+<h1 id="最常见的异常"><a href="#最常见的异常" class="headerlink" title="最常见的异常"></a>最常见的异常</h1><h2 id="处理NullPointerException"><a href="#处理NullPointerException" class="headerlink" title="处理NullPointerException"></a>处理NullPointerException</h2><p>首先，必须明确，<code>NullPointerException</code>是一种代码逻辑错误，遇到<code>NullPointerException</code>，遵循原则是早暴露，早修复，严禁使用<code>catch</code>来隐藏这种编码错误：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 错误示例: 捕获NullPointerException</span></span><br><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">    transferMoney(from, to, amount);</span><br><span class="line">&#125; <span class="keyword">catch</span> (NullPointerException e) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>解决方法在于好的编码习惯</p>
+<ol>
+<li>成员变量定义初始化：</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//使用空串 &quot;&quot; 而不是让编译器自动初始化为默认值 Null</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> String name = <span class="string">&quot;&quot;</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="定位NullPointerException"><a href="#定位NullPointerException" class="headerlink" title="定位NullPointerException"></a>定位NullPointerException</h2><p>要想定位 <code>NullPointerException</code>很麻烦，例如：</p>
+<p>调用<code>a.b.c.x()</code>时产生了<code>NullPointerException</code>，原因可能是：</p>
+<ul>
+<li><code>a</code>是<code>null</code>；</li>
+<li><code>a.b</code>是<code>null</code>；</li>
+<li><code>a.b.c</code>是<code>null</code>；</li>
+</ul>
+<p>确定到底是哪个对象是<code>null</code>以前只能打印这样的日志：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">System.out.println(a);</span><br><span class="line">System.out.println(a.b);</span><br><span class="line">System.out.println(a.b.c);</span><br></pre></td></tr></table></figure>
+
+<p>从<code>Java</code> 14开始，如果产生了<code>NullPointerException</code>，JVM可以给出详细的信息告诉我们<code>null</code>对象到底是谁。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Person p = <span class="keyword">new</span> Person();</span><br><span class="line">        System.out.println(p.address.city.toLowerCase());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> </span>&#123;</span><br><span class="line">    String[] name = <span class="keyword">new</span> String[<span class="number">2</span>];</span><br><span class="line">    Address address = <span class="keyword">new</span> Address();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Address</span> </span>&#123;</span><br><span class="line">    String city;</span><br><span class="line">    String street;</span><br><span class="line">    String zipcode;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*输出结果</span></span><br><span class="line"><span class="comment">Exception in thread &quot;main&quot; java.lang.NullPointerException: Cannot invoke &quot;String.toLowerCase()&quot; because &quot;&lt;local1&gt;.address.city&quot; is null</span></span><br><span class="line"><span class="comment">at Main.main(Main.java:5)</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong>这种增强的<code>NullPointerException</code>详细信息是Java 14新增的功能，但默认是关闭的，我们可以给JVM添加一个<code>-XX:+ShowCodeDetailsInExceptionMessages</code>参数启用它：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java -XX:+ShowCodeDetailsInExceptionMessages Main.java</span><br></pre></td></tr></table></figure>
+    </div>
+
+    
+    
+    
+
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+ 
+        <div class="reward-container">
+  <div>原创技术分享，您的支持将鼓励我继续创造</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Raint 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Raint 支付宝">
+        <p>支付宝</p>
+      </div>
+
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Raint
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://raint9.tk/2021/03/11/Java/%E5%BC%82%E5%B8%B8/" title="异常">http://raint9.tk/2021/03/11/Java/异常/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
+          </a>
+        </div>
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS</span>
+          </a>
+        </div>
+    </div>
+  </div>
+
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+              <a href="/tags/%E8%8F%8A%E4%B8%B8%E6%A0%97%E5%AD%90/" rel="tag"># 菊丸栗子</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/11/%E9%80%9A%E4%BF%A1/" rel="prev" title="基本结构">
+      <i class="fa fa-chevron-left"></i> 基本结构
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2021/03/11/Java/API/" rel="next" title="API">
+      API <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81MjgyOS8yOTMwNw=="></div>
+  </div>
+  
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Error%E5%92%8CException"><span class="nav-number">1.</span> <span class="nav-text">Error和Exception</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%BC%96%E8%AF%91%E6%97%B6%E5%BC%82%E5%B8%B8"><span class="nav-number">2.</span> <span class="nav-text">编译时异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%80"><span class="nav-number">2.1.</span> <span class="nav-text">方式一</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%BA%8C"><span class="nav-number">2.2.</span> <span class="nav-text">方式二</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E5%BC%8F%E4%B8%89"><span class="nav-number">2.3.</span> <span class="nav-text">方式三</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%BF%90%E8%A1%8C%E6%97%B6%E5%BC%82%E5%B8%B8"><span class="nav-number">3.</span> <span class="nav-text">运行时异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8A%9B%E5%87%BA%E5%BC%82%E5%B8%B8"><span class="nav-number">4.</span> <span class="nav-text">抛出异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%BC%82%E5%B8%B8%E8%BD%AC%E6%8D%A2%E9%97%AE%E9%A2%98"><span class="nav-number">5.</span> <span class="nav-text">异常转换问题</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#finally"><span class="nav-number">6.</span> <span class="nav-text">finally</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%80%BB%E7%BB%93"><span class="nav-number">7.</span> <span class="nav-text">总结</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8"><span class="nav-number">8.</span> <span class="nav-text">自定义异常</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E5%B8%B8%E8%A7%81%E7%9A%84%E5%BC%82%E5%B8%B8"><span class="nav-number">9.</span> <span class="nav-text">最常见的异常</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%A4%84%E7%90%86NullPointerException"><span class="nav-number">9.1.</span> <span class="nav-text">处理NullPointerException</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9A%E4%BD%8DNullPointerException"><span class="nav-number">9.2.</span> <span class="nav-text">定位NullPointerException</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Raint"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Raint</p>
+  <div class="site-description" itemprop="description">平凡的脚步也可以走出伟大的行程</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives">
+        
+          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags">
+          
+        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/raint9" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;raint9" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:leafssr@gmail.com" title="GE-Mail → mailto:leafssr@gmail.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>GE-Mail</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://raint9.tk/" title="https:&#x2F;&#x2F;raint9.tk">Title</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://baidu.com/" title="https:&#x2F;&#x2F;baidu.com" rel="noopener" target="_blank">Baidu</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://google.com/" title="https:&#x2F;&#x2F;google.com" rel="noopener" target="_blank">Google</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://youtube.com/" title="https:&#x2F;&#x2F;youtube.com" rel="noopener" target="_blank">YouTube</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com" rel="noopener" target="_blank">Github</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://bilibili.com/" title="https:&#x2F;&#x2F;bilibili.com" rel="noopener" target="_blank">Bilibili</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+        <div class="back-to-top motion-element">
+          <i class="fa fa-arrow-up"></i>
+          <span>0%</span>
+        </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Raint</span>
+</div>
+  <!-- <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+-->
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共72.4k字</span>
+</div>
+
+
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+    <span id="busuanzi_container_site_pv">总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+    <span class="post-meta-divider">|</span>
+    <span id="busuanzi_container_site_uv">总访客数<span id="busuanzi_value_site_uv"></span>人</span>
+    <span class="post-meta-divider">|</span>
+<!-- 不蒜子计数初始值纠正 -->
+<script>
+$(document).ready(function() {
+
+    var int = setInterval(fixCount, 50);  // 50ms周期检测函数
+    var countOffset = 20000;  // 初始化首次数据
+
+    function fixCount() {            
+       if (document.getElementById("busuanzi_container_site_pv").style.display != "none")
+        {
+            $("#busuanzi_value_site_pv").html(parseInt($("#busuanzi_value_site_pv").html()) + countOffset); 
+            clearInterval(int);
+        }                  
+        if ($("#busuanzi_container_site_pv").css("display") != "none")
+        {
+            $("#busuanzi_value_site_uv").html(parseInt($("#busuanzi_value_site_uv").html()) + countOffset); // 加上初始数据 
+            clearInterval(int); // 停止检测
+        }  
+    }
+       	
+});
+</script> 
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <span class="post-meta-item" id="busuanzi_container_site_uv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-user"></i>
+      </span>
+      <span class="site-uv" title="总访客量">
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+    </span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item" id="busuanzi_container_site_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-eye"></i>
+      </span>
+      <span class="site-pv" title="总访问量">
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+    </span>
+</div>
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  <script src="/lib/anime.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
+  <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.9},"log":false});</script></body>
+</html>
