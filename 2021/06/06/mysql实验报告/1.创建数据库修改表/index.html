@@ -23,17 +23,22 @@
     var CONFIG = {"hostname":"raint9.tk","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":true,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":true,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="平凡的脚步也可以走出伟大的行程">
-<meta property="og:type" content="website">
-<meta property="og:title" content="荒古遗迹">
-<meta property="og:url" content="http://raint9.tk/tags/C/index.html">
+  <meta name="description" content="一次来也匆匆去也匆匆的MySQL实验报告，由我与好友冬莱先生修订">
+<meta property="og:type" content="article">
+<meta property="og:title" content="实验一.创建数据库，修改表">
+<meta property="og:url" content="http://raint9.tk/2021/06/06/mysql%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/1.%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E8%A1%A8/index.html">
 <meta property="og:site_name" content="荒古遗迹">
-<meta property="og:description" content="平凡的脚步也可以走出伟大的行程">
+<meta property="og:description" content="一次来也匆匆去也匆匆的MySQL实验报告，由我与好友冬莱先生修订">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-06-06T14:38:32.807Z">
+<meta property="article:modified_time" content="2021-06-06T15:32:58.160Z">
 <meta property="article:author" content="Raint">
+<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="Raint">
+<meta property="article:tag" content="冬莱">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://raint9.tk/tags/C/">
+<link rel="canonical" href="http://raint9.tk/2021/06/06/mysql%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/1.%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E8%A1%A8/">
 
 
 <script id="page-configurations">
@@ -41,12 +46,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>标签: C++ | 荒古遗迹</title>
+  <title>实验一.创建数据库，修改表 | 荒古遗迹</title>
   
 
 
@@ -192,57 +197,345 @@
         <div class="content-wrap">
           
 
-          <div class="content tag">
+          <div class="content post posts-expand">
             
 
+    
   
   
-  
-  <div class="post-block">
-    <div class="posts-collapse">
-      <div class="collection-title">
-        <h2 class="collection-header">C++
-          <small>标签</small>
-        </h2>
-      </div>
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://raint9.tk/2021/06/06/mysql%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/1.%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E8%A1%A8/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Raint">
+      <meta itemprop="description" content="平凡的脚步也可以走出伟大的行程">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="荒古遗迹">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          实验一.创建数据库，修改表
+        </h1>
+
+        <div class="post-meta">
+
+  <i class="fa fa-thumb-tack"></i>
+  <font color=7D26CD>置顶</font>
+  <span class="post-meta-divider">|</span>
+
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-06-06 22:38:32 / 修改时间：23:32:58" itemprop="dateCreated datePublished" datetime="2021-06-06T22:38:32+08:00">2021-06-06</time>
+            </span>
+
+          
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
+<p></p>
+
+  <div class="out-img-topic">
+    <img src=/summary_images/TokyoGhoul.jpg class="image-size-400">
+  </div>
+
+            <div class="post-description">一次来也匆匆去也匆匆的MySQL实验报告，由我与好友冬莱先生修订</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+        <h2 id="实验名称：创建数据库表，修改表"><a href="#实验名称：创建数据库表，修改表" class="headerlink" title="实验名称：创建数据库表，修改表"></a>实验名称：创建数据库表，修改表</h2><h2 id="实验目的："><a href="#实验目的：" class="headerlink" title="实验目的："></a>实验目的：</h2><ul>
+<li>1.了解MySQL的数据类型及环境</li>
+<li>2.利用MySQL命令行窗口创建数据库及表</li>
+<li>3.熟练掌握修改数据库表</li>
+<li>4.完整性约束设计</li>
+</ul>
+<h2 id="实验原理"><a href="#实验原理" class="headerlink" title="实验原理"></a>实验原理</h2><p>DBMS环境的使用</p>
+<h2 id="仪器与材料"><a href="#仪器与材料" class="headerlink" title="仪器与材料"></a>仪器与材料</h2><p>PC，Windows7系统，MySQL5.7</p>
+<h2 id="实验步骤："><a href="#实验步骤：" class="headerlink" title="实验步骤："></a>实验步骤：</h2><p>1.登录MySQL服务器</p>
+<p>2.利用MySQL数据库客户端访问数据库<br>  (1)创建数据库st<br>    命令：create database st;<br>  (2)选择st为当前数据库<br>    命令：use st;<br>3.创建数据库表<br>  (1)student表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table student(</span><br><span class="line">    sno char(9) primary key,</span><br><span class="line">    sname char(20) unique,</span><br><span class="line">    ssex char(2),</span><br><span class="line">    sage smallint,</span><br><span class="line">    sdept char(20)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>(2)建立一个course表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">create table course(</span><br><span class="line">   cno char(4) primary key,</span><br><span class="line">   cname char(20) not null,</span><br><span class="line">   cpno char(4),</span><br><span class="line">   ccredit smallint,</span><br><span class="line">   foreign key(cpno) references course(cno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p>(3)建立sc表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">create table sc(</span><br><span class="line">   sno char(9),</span><br><span class="line">   cno char(4),</span><br><span class="line">   Grade smallint,</span><br><span class="line">   primary key(sno,cno),</span><br><span class="line">   foreign key(sno) references student(sno),</span><br><span class="line">   foreign key(cno) references course(cno)</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="结果"><a href="#结果" class="headerlink" title="结果"></a>结果</h3><p>student表：</p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>null</th>
+<th>key</th>
+<th>default</th>
+<th>extra</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sno</td>
+<td>char(9)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>sname</td>
+<td>char(40)</td>
+<td>YES</td>
+<td>UNI</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>ssex</td>
+<td>char(2)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>sage</td>
+<td>smallint(6)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>sdept</td>
+<td>char(20)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>course表：</p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>null</th>
+<th>key</th>
+<th>default</th>
+<th>extra</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cno</td>
+<td>char(4)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>cname</td>
+<td>char(40)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>cpno</td>
+<td>char(4)</td>
+<td>YES</td>
+<td>MUL</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>ccredit</td>
+<td>smallint(6)</td>
+<td>YES</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>sc表：</p>
+<table>
+<thead>
+<tr>
+<th>field</th>
+<th>type</th>
+<th>null</th>
+<th>key</th>
+<th>default</th>
+<th>extra</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>sno</td>
+<td>char(9)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>cno</td>
+<td>char(4)</td>
+<td>NO</td>
+<td>PRI</td>
+<td>NULL</td>
+<td></td>
+</tr>
+<tr>
+<td>grade</td>
+<td>smallint(6)</td>
+<td>NO</td>
+<td></td>
+<td>NULL</td>
+<td></td>
+</tr>
+</tbody></table>
+<p>4.修改表</p>
+<p>(1)向student表增加“入学时间”列，其数据类型为日期型<br>   alter    table    student     add    s_entrance     Date;</p>
+<p>(2)将年龄的数据类型由字符型改为整形<br>   alter     table    student     alter   column     sage    int;</p>
+<p>(3)删除student表<br>   drop     table     student   cascade;</p>
+<h2 id="讨论及问题回答："><a href="#讨论及问题回答：" class="headerlink" title="讨论及问题回答："></a>讨论及问题回答：</h2><p>1.如何修改表中字段的名字？<br>   alter   table  &lt;表名&gt;  change  &lt;字段名&gt;  &lt;新字段名&gt;  &lt;字段类型&gt;;</p>
+<p>2.如何修改表中字段的属性？<br>   alter   table  &lt;表名&gt;  modify  &lt;字段名&gt;  &lt;新字段类型&gt; ;</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    
+    
+    
 
-      <div class="post-meta">
-        <time itemprop="dateCreated"
-              datetime="2021-03-07T19:51:03+08:00"
-              content="2021-03-07">
-          03-07
-        </time>
+   <div>
+     <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:24px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+   </div>
+ 
+        <div class="reward-container">
+  <div>原创技术分享，您的支持将鼓励我继续创造</div>
+  <button onclick="var qr = document.getElementById('qr'); qr.style.display = (qr.style.display === 'none') ? 'block' : 'none';">
+    打赏
+  </button>
+  <div id="qr" style="display: none;">
+      
+      <div style="display: inline-block;">
+        <img src="/images/wechatpay.png" alt="Raint 微信支付">
+        <p>微信支付</p>
+      </div>
+      
+      <div style="display: inline-block;">
+        <img src="/images/alipay.png" alt="Raint 支付宝">
+        <p>支付宝</p>
       </div>
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/03/07/C++-%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1(%E4%B8%80)/" itemprop="url">
-            <span itemprop="name">C++心得体会(一)</span>
+  </div>
+</div>
+
+        
+
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>Raint
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://raint9.tk/2021/06/06/mysql%E5%AE%9E%E9%AA%8C%E6%8A%A5%E5%91%8A/1.%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BF%AE%E6%94%B9%E8%A1%A8/" title="实验一.创建数据库，修改表">http://raint9.tk/2021/06/06/mysql实验报告/1.创建数据库修改表/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+        
+
+  <div class="followme">
+    <p>欢迎关注我的其它发布渠道</p>
+
+    <div class="social-list">
+
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/images/wechat_channel.jpg">
+            <span class="icon">
+              <i class="fab fa-weixin"></i>
+            </span>
+
+            <span class="label">WeChat</span>
           </a>
-      </div>
+        </div>
 
-    </header>
-  </article>
+        <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
 
+            <span class="label">RSS</span>
+          </a>
+        </div>
     </div>
   </div>
-  
-  
-  
 
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/Raint/" rel="tag"># Raint</a>
+              <a href="/tags/%E5%86%AC%E8%8E%B1/" rel="tag"># 冬莱</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/03/14/%E5%85%B3%E4%BA%8E%E6%88%91/" rel="prev" title="关于我">
+      <i class="fa fa-chevron-left"></i> 关于我
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
   
 
 
 
           </div>
           
+    
+  <div class="comments">
+    <div id="lv-container" data-id="city" data-uid="MTAyMC81MjgyOS8yOTMwNw=="></div>
+  </div>
+  
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -289,6 +582,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%90%8D%E7%A7%B0%EF%BC%9A%E5%88%9B%E5%BB%BA%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%EF%BC%8C%E4%BF%AE%E6%94%B9%E8%A1%A8"><span class="nav-number">1.</span> <span class="nav-text">实验名称：创建数据库表，修改表</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E7%9B%AE%E7%9A%84%EF%BC%9A"><span class="nav-number">2.</span> <span class="nav-text">实验目的：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E5%8E%9F%E7%90%86"><span class="nav-number">3.</span> <span class="nav-text">实验原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BB%AA%E5%99%A8%E4%B8%8E%E6%9D%90%E6%96%99"><span class="nav-number">4.</span> <span class="nav-text">仪器与材料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%AE%9E%E9%AA%8C%E6%AD%A5%E9%AA%A4%EF%BC%9A"><span class="nav-number">5.</span> <span class="nav-text">实验步骤：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%BB%93%E6%9E%9C"><span class="nav-number">5.1.</span> <span class="nav-text">结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E8%AE%A8%E8%AE%BA%E5%8F%8A%E9%97%AE%E9%A2%98%E5%9B%9E%E7%AD%94%EF%BC%9A"><span class="nav-number">6.</span> <span class="nav-text">讨论及问题回答：</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -501,6 +795,21 @@ $(document).ready(function() {
 
   
 
+<script>
+NexT.utils.loadComments(document.querySelector('#lv-container'), () => {
+  window.livereOptions = {
+    refer: location.pathname.replace(CONFIG.root, '').replace('index.html', '')
+  };
+  (function(d, s) {
+    var j, e = d.getElementsByTagName(s)[0];
+    if (typeof LivereTower === 'function') { return; }
+    j = d.createElement(s);
+    j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+    j.async = true;
+    e.parentNode.insertBefore(j, e);
+  })(document, 'script');
+});
+</script>
 
 <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400},"mobile":{"show":true},"react":{"opacity":0.9},"log":false});</script></body>
 </html>
